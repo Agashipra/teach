@@ -1,0 +1,2 @@
+hts-cache/* filter=lfs diff=lfs merge=lfs -text
+www.gharpeshiksha.com/* filter=lfs diff=lfs merge=lfs -text
