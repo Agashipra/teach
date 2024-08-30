@@ -1,0 +1,653 @@
+body {
+  background-image: url("../ds/img/core-img/texture.webp");
+  padding-top: 1px;
+  /* margin-top: -77px; */
+  font-family: "Montserrat", serif;
+}
+
+#reviews {
+  min-height: 80vh;
+}
+
+.backgroundImage {
+  width: 100vw;
+  height: 250px;
+  background: #0097b2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Header_text{
+  font-size: 23px;
+  font-weight: 600;
+  color: #f3f3f3;
+}
+.cardHover{
+  width: 47%;
+  margin: .5rem 10px;
+}
+.cardHover .card{
+  padding-bottom: .5rem;
+}
+
+.cardHover:hover .contactIcon{
+  animation: rotateIcon 3s infinite ease-in-out;
+}
+
+
+@keyframes rotateIcon {
+  0% {
+    transform: rotate(-15deg);
+  }
+  10% {
+    transform: rotate(45deg);
+  }
+  25% {
+    transform: rotate(-15deg);
+  }
+  40% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(00deg);
+  }
+}
+
+.PopupCloseBTN{
+  font-size: 10px;
+  border: 1px solid #525252;
+  border-radius: 50%;
+  padding: .4rem;
+}
+.popupHeading{
+  color: #4d4d4d;
+  font-size: 32px;
+}
+.Bubble{
+  background-color: #eeeeee;
+  border-radius: 50%;
+  padding: 1rem 0;
+  width: 110px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.startModalBTN{
+  font-size: 21px;
+  margin: .5rem 0;
+}
+
+.BubbleHead{
+  color: #ff4040;
+  font-weight: 600;
+  font-size: 14px;
+}
+.BubbleContent{
+  font-size: 13px;
+}
+.card{
+  border: 1px solid #575757;
+  border-radius: .8rem;
+}
+
+.teacherProfile {
+  /* margin-top: -120px; */
+  background-color: #fff;
+  border-radius: .8rem;
+}
+.subHeader {
+  position: sticky;
+  top: 80px;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1;
+  border-radius: 0;
+}
+.topPart .firstRow{
+  display: flex;
+}
+.secondRow{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content:space-around;
+}
+.BubbleDiv{
+  width: 50%;
+  text-align: center;
+  margin: .8rem 0;
+}
+.modal-dialog{
+  width: 70%;
+}
+.subHeader ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.subHeader li {
+  margin-right: 20px;
+}
+
+.carousel {
+  width: 95%;
+  margin: auto;
+}
+
+.carousel-item {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.carousel-item .card {
+  width: 15rem;
+  margin: 0 1rem;
+}
+
+.subHeader a {
+  text-decoration: none;
+  color: #333;
+  position: relative;
+}
+
+.subHeader a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: blue;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.bottomPart{
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.line {
+  display: block;
+  height: 1px;
+  width: 100%;
+  margin-left: -10px;
+  background: #d8d8d8;
+  margin: 30px 0;
+  position: relative;
+}
+.bottomCard{
+  width: 33%;
+}
+
+.bottomCard .number {
+  content: '';
+  background: #5b81ff;
+  border-radius: 50%;
+  position: absolute;
+  top: 51%;
+  margin-top: -22px;
+  left: 50%;
+  margin-left: -10px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottomCard .number span{
+  z-index: 10;
+  font-size: 18px;
+  padding: 1.3rem;
+  color: #fff;
+}
+
+
+.subHeader a.active::after {
+  width: 100%;
+}
+
+.teacherImgContainer {
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  margin: 0.5rem 0;
+  border: 1px solid #7a7a7a;
+}
+.teacherImgContainer img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.teacherName {
+  font-size: 21px;
+  font-weight: 700;
+  color: #7a7a7a;
+}
+.TeacherAge {
+  font-size: 11px;
+  font-weight: 500;
+  color: #949494;
+}
+.TeacherBasicInfo {
+  border: none;
+  box-shadow: 0px 0px 3px 1px #cacaca;
+  margin-top: 1.5rem;
+}
+.Reviews {
+  margin-right: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #6d6d6d;
+}
+.ReviewCard {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 1rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+.AddReviewBTN {
+  background-color: #326cb5;
+  color: #fff;
+  font-size: 14px;
+  border: 1px solid #326cb5;
+}
+.fontIcon {
+  font-size: 15px;
+  color: #2776ff;
+}
+.infoText {
+  font-size: 14px;
+  font-weight: 600;
+  color: #727272;
+}
+.teacherAbout {
+  font-size: 13px;
+  color: #4d4d4d;
+  font-weight: 500;
+  margin: 0 1rem;
+}
+.moreAboutTeacher{
+  margin-top: 1rem;
+}
+.TeachersMore_Info{
+  width: 33.33%;
+}
+
+.featureHeading {
+  font-size: 17px;
+  font-weight: 700;
+  color: #535353;
+}
+
+#teacher-info .card {
+  min-height: 40vh;
+}
+.featureList li {
+  list-style: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #474747;
+}
+.Reviews .star {
+  background: url(../images/star_icon.svg) no-repeat
+    3px 3px;
+  background-size: 18px;
+  background-position: center;
+  padding-left: 25px;
+}
+.CarosalHeading {
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+  color: #535353;
+}
+
+.cardImageContainer {
+  width: 100%;
+  border: 1px solid #7a7a7a;
+  border-radius: 0.6rem;
+  padding: 0.1rem;
+}
+.cardImageContainer img{
+  width: 100%;
+  padding: 3px;
+}
+.location {
+  color: #686868;
+  font-size: 14px;
+}
+.answer {
+  font-size: 13px;
+  margin-top: 0.5rem;
+}
+
+.EnqueryForm {
+  position: sticky;
+  top: 15px;
+  border-radius: 0.5rem;
+  font-family: "Vollkorn", serif;
+  font-size: 15px;
+  background-color: #fff;
+}
+.EnqueryForm input,
+.EnqueryForm select {
+  font-size: 13px;
+}
+
+.EnqueryForm h4 {
+  background-color: #326cb5;
+  color: #fff;
+  text-align: center;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  margin-top: 0;
+
+}
+
+.EnqueryButton {
+  padding: 0.2rem 2.5rem;
+  border-radius: 1rem;
+  margin: 1rem 0;
+}
+
+.seoContent {
+  min-height: 80vh;
+}
+.teacherContent{
+  display: flex;
+  width: 100%; 
+  justify-content: space-between;
+}
+
+.teacherContent_Form{
+  width: 28%;
+  margin-top: 1rem;
+}
+.teacherContent_Content{
+  width: 68%;
+}
+.titleLogo {
+  margin: 1rem;
+  background: #f18c8c;
+  color: #fff;
+  font-size: 23px;
+  padding:0.2rem 1.1rem;;
+  border-radius: 50%;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.reviewDate {
+  font-size: 14px;
+  font-weight: 600;
+  color: #686868;
+}
+.teacherReviewDescription {
+  font-size: 14px;
+  font-weight: 600;
+  color: #747474;
+  font-family: "Montserrat", sans-serif;
+}
+.rrSide {
+  width: 85%;
+}
+.loadMore {
+  text-decoration: none;
+  border: 1px solid #4f7db3;
+  padding: 0.7rem 1rem;
+  font-size: 18px;
+  border-radius: 0.5rem;
+  color: #4f7db3;
+}
+.MainReview {
+  background-color: #fff;
+  padding: 0 1rem;
+}
+
+.seoContent {
+  background-color: #fff;
+  /* padding: 0; */
+}
+.teacherLink {
+  font-size: 14px;
+  color: #474747;
+}
+
+.adTeacherName {
+  font-size: 16px;
+  font-weight: 700;
+  color: #727272;
+}
+
+.location {
+  font-size: 13px;
+}
+.adsInfo,
+.adsfontIcon {
+  font-size: 12px;
+}
+.givenRating {
+  color: #686868;
+  font-weight: 600;
+  font-size: 20px;
+}
+.outOfRating{
+  font-size: 12px;
+}
+.numberOfReviews{
+  font-size: 12px;
+  margin-left: .3rem;
+}
+.adsProfileVisit{
+  font-size: 12px;
+}
+
+.ConfirmationModalBody{
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+.ModalHighligts{
+  font-size: 18px;
+  font-weight: 600;
+  color: #ff5656;
+}
+
+.newModalContent{
+  transform: none;
+  position: relative;
+  top: 20%;
+}
+.review-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.ConfirmationModalHeadContent{
+  font-size: 17px;
+  color: #4a4a4a;
+}
+.ConfirmationModalHead{
+  display: flex;
+flex-direction: column;
+margin: 0.9rem 0;
+}
+@media only screen and (max-width: 991px) {
+  .teacherContent{
+    flex-direction: column;
+    align-items: center;
+  }
+  .teacherContent_Form,
+  .teacherContent_Content{
+    width: 95%;
+  }
+  .modal_image{
+    display: none;
+  }
+  .bottomCard{
+    width: 80% !important;
+    margin: 1rem auto;
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 756px) {
+  .cardHover{
+    width: 80%;
+    margin-bottom: .8rem;
+  }
+  .TeachersMore_Info{
+    width: 50% !important;
+  }
+  .ConfirmationModalBody{
+    width: 80%;
+  }
+  .modal_image{
+    display: none;
+  }
+  .carousel-item .card {
+    width: 15rem;
+    margin: 0 0.5rem;
+  }
+  .teacherImgContainer {
+    height: 80px;
+    width: 80px;
+  }
+  .teacherName {
+    font-size: 17px;
+    margin-left: 0px;
+  }
+  .TeacherAge {
+    font-size: 7px;
+  }
+  .Reviews {
+    margin-right: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #949494;
+  }
+  .right_left_card {
+    flex-direction: column;
+  }
+  .rSide {
+    padding: 1rem;
+  }
+  .teacherName1 {
+    text-align: center;
+  }
+  .reviewSection {
+    font-size: 1.8rem;
+  }
+.modal-dialog{
+  margin:  0 auto;
+}
+.firstRow p {
+  font: 12px;
+}
+.popupHeading{
+  font-size: 16px;
+  font-weight: 700;
+}
+.topPart .firstRow{
+  width: 100%;
+}
+
+}
+
+@media only screen and (max-width: 576px) {
+  .infoText {
+    font-size: 12px;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-title {
+    margin: 0;
+  }
+  .reviewSection {
+    font-size: 1.4rem;
+  }
+  .featureList li {
+    font-size: 14px;
+  }
+  .featureHeading {
+    font-size: 15px;
+  }
+  .cardHover{
+    width: 90%;
+  }
+  .modal-dialog{
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .cardHover{
+    width: 100%;
+  }
+  .teacherName {
+    font-size: 14px;
+    margin-left: 0px;
+  }
+  .TeacherAge {
+    font-size: 5px;
+  }
+  .Reviews {
+    font-size: 10px;
+  }
+
+  .infoText {
+    font-size: 10px;
+  }
+  .fontIcon {
+    font-size: 10px;
+  }
+  .AddReviewBTN {
+    font-size: 10px;
+  }
+  .featureList li {
+    font-size: 12px;
+  }
+  .reviewSectionTitle h5 {
+    font-size: 12px;
+  }
+  /* .givenRating {
+    font-size: 18px;
+  }
+  .outOfRating{
+    font-size: 11px;
+  }
+  .numberOfReviews{
+    font-size: 12px;
+    margin-left: .2rem;
+  }
+  .cardImageContainer{
+    width: 4rem;
+  } */
+
+}
+
+@media only screen and (max-width: 500px) {
+  .carousel-item .card {
+    width: 17rem;
+    margin: 0 2.5rem;
+  }
+}
+@media only screen and (max-width: 390px) {
+  .carousel-item .card {
+    /* width: 17rem; */
+    margin: 0;
+  }
+}
