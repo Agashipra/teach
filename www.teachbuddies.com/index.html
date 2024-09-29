@@ -1,5 +1,7 @@
 <!-- line - 47 -->
 
+<!-- action = "./js/Google Sheet.js -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +15,7 @@
 
 	<link rel="icon" type="image/png" href="../www.teachbuddies.com/newImg/TeachBuddies_LOGO-removebg-preview.png" />
 	<link rel="stylesheet" href="../storage.googleapis.com/gpswebsite-cdn/newCss/bootstrap.min.css">
-
+	<link rel="stylesheet" href="Google Sheet.css">
 
 
 	<link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
@@ -26,7 +28,12 @@
 	<link rel="stylesheet" type="text/css" href="../cdn.jsdelivr.net/npm/slick-carousel%401.8.1/slick/slick.css" />
 	<link rel="stylesheet" href="../code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
+	 <!-- jQuery Library -->
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+	 <!-- Google Maps JavaScript library with Places API -->
+	 <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=YOUR_API_KEY"></script>
+   
 	<script src="../ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 	<script src="../maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -1799,8 +1806,7 @@
 											<li class="select2-search select2-search--inline"><input
 												class="select2-search__field" type="search" tabindex="0"
 												autocomplete="off" autocorrect="off" autocapitalize="none"
-												spellcheck="false" role="textbox" aria-autocomplete="list"
-												onfocus="getLocation()" placeholder="Enter your address"
+												spellcheck="false" role="textbox" id="search-input" placeholder="Enter your address"
 												style="width: 536.5px;"></li>
 										</ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
 
@@ -4991,7 +4997,7 @@
 				$.ajax
 					({
 						type: "POST",
-						url: "https://14-dot-api-dot-gpschat.appspot.com/OnlineCourseStudentLogin/sendotp",
+						action: './js/Google Sheet.js',
 						data: { "phone": phone },
 						success: function (data) {
 
@@ -5213,7 +5219,7 @@
 				data: function (params) {
 					return {
 						query: params.term,
-						apikey: '6TeKtXl6AcISyHSrELfRe0NqgtshetCMOIQi-vUWGVY',
+						apikey: 'zM3V80KO_pCSPwfalOB-qwZ-dx-D_Plo4CtlCHf8_8E',
 
 						// vctOA9S5BTXHCd4y0O70044bG5KeIVman2zS53uqTrI
 
@@ -5350,68 +5356,68 @@
 
 
 
-		function getLocation() {
+		// function getLocation() {
 
-			if (navigator.geolocation) {
+		// 	if (navigator.geolocation) {
 
-				navigator.geolocation.getCurrentPosition(function (position) {
-					var geolocation =
-					{
-						lat: position.coords.latitude,
-						lng: position.coords.longitude
-					};
-
-
-					latitudeone = position.coords.latitude;
-
-					longitudeone = position.coords.longitude;
-
-					log("lattitude:" + latitudeone + " longitudeone:" + longitudeone);
-					var autoCompleteOne = {
-						minimumInputLength: 1,
-						ajax: {
-							url: 'https://autocomplete.geocoder.ls.hereapi.com/6.2/suggest.json',
-							delay: 250,
-							dataType: 'json',
-							data: function (params) {
-								return {
-									query: params.term,
-									// Enter api key
-									apikey: 'zM3V80KO_pCSPwfalOB-qwZ-dx-D_Plo4CtlCHf8_8E',
-									country: 'IND',
-									prox: latitudeone + "," + longitudeone
-								};
-							},
-							processResults: function (data) {
-								return {
-									results: $.map(data.suggestions, function (obj) {
-										return {
+		// 		navigator.geolocation.getCurrentPosition(function (position) {
+		// 			var geolocation =
+		// 			{
+		// 				lat: position.coords.latitude,
+		// 				lng: position.coords.longitude
+		// 			};
 
 
-											id: obj.locationId, text: obj.label.split(', ').reverse().join(', '), value: obj.address.postalCode
+		// 			latitudeone = position.coords.latitude;
+
+		// 			longitudeone = position.coords.longitude;
+
+		// 			log("lattitude:" + latitudeone + " longitudeone:" + longitudeone);
+		// 			var autoCompleteOne = {
+		// 				minimumInputLength: 1,
+		// 				ajax: {
+		// 					url: 'https://autocomplete.geocoder.ls.hereapi.com/6.2/suggest.json',
+		// 					delay: 250,
+		// 					dataType: 'json',
+		// 					data: function (params) {
+		// 						return {
+		// 							query: params.term,
+		// 							// Enter api key
+		// 							apikey: 'zM3V80KO_pCSPwfalOB-qwZ-dx-D_Plo4CtlCHf8_8E',
+		// 							country: 'IND',
+		// 							prox: latitudeone + "," + longitudeone
+		// 						};
+		// 					},
+		// 					processResults: function (data) {
+		// 						return {
+		// 							results: $.map(data.suggestions, function (obj) {
+		// 								return {
 
 
-										};
-									})
-								};
-							}
-						},
-						escapeMarkup: function (markup) { return markup; }
-					};
+		// 									id: obj.locationId, text: obj.label.split(', ').reverse().join(', '), value: obj.address.postalCode
+
+
+		// 								};
+		// 							})
+		// 						};
+		// 					}
+		// 				},
+		// 				escapeMarkup: function (markup) { return markup; }
+		// 			};
 
 
 
-				});
-
-
+		// 		});
 
 
 
 
 
-			}
 
-		};
+
+		// 	}
+
+		// };
 
 
 	</script>
@@ -9308,11 +9314,31 @@
 
 	</script>
 
+	<script src="./js/Google Sheet.js"></script>
+
+	<script>
+	    var searchInput = 'search-input';
+
+	    $(document).ready(function () {
+	      var autocomplete;
+	      autocomplete = new google.maps.places.Autocomplete(
+	        document.getElementById(searchInput),
+	        {
+	          types: ['establishment']
+	        }
+	      );
+
+	      google.maps.event.addListener(autocomplete, 'place_changed', function () {
+	        var near_place = autocomplete.getPlace();
+	      });
+	    });
+	</script>
 
 
 	<script
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiQk-jVBIRKkYgO5b2sKcoy1HTFm1FZ28&amp;libraries=places&amp;callback=initAutocomplete"
-		async defer></script>
+		async defer>
+	</script>
 
 </body>
 
