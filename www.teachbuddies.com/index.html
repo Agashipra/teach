@@ -1091,55 +1091,32 @@
 			box-sizing: border-box
 		}
 
-		@ -webkit-keyframes sdb04 {
-			0% {
+		@-webkit-keyframes sdb04{
+			0%{
 				-webkit-transform: rotate(-45deg) translate(0, 0)
 			}
-
-			20 % {
+			20%{
 				-webkit-transform:
-
-
-
-
-					rotate (-45deg) translate (-10px,
-						10px)
+					rotate (-45deg) translate (-10px,10px)
 			}
-
-			40 % {
-				-webkit-transform:
-
-
-
-
-					rotate (-45deg) translate (0,
-						0)
+			40%{
+				-webkit-transform: 
+					rotate (-45deg) translate (0,0)
 			}
 		}
 
-		@ keyframes sdb04 {
+		@keyframes sdb04{
 			0% {
 				transform: rotate(-45deg) translate(0, 0)
 			}
 
-			20 % {
+			20%{
 				transform:
-
-
-
-
-					rotate (-45deg) translate (-10px,
-						10px)
+					rotate (-45deg) translate (-10px,10px)
 			}
-
-			40 % {
+			40%{
 				transform:
-
-
-
-
-					rotate (-45deg) translate (0,
-						0)
+					rotate (-45deg) translate (0,0)
 			}
 		}
 
@@ -1606,8 +1583,8 @@
 
 				<div class="col-md-6" style="margin: 0 auto;">
 					<section class="contact-wrap">
-						<form role="form" data-hero-form="" id="MainQueryForm"
-							name="MainQueryForm" class="contact-form hero-form"
+						<form role="form" data-hero-form="" id=""
+							name="MainQueryForm" action = "./js/MainQueryForm.js"  class="contact-form hero-form"
 							autocomplete="off">
 
 							<div>
@@ -4948,11 +4925,7 @@
 		var successVAr;
 		function sendOtp() {
 			$("#CheckImg").hide();
-
-
 			$("#verifyOTP_BTN").show();
-
-
 			//  alert("Inside Send Otp");	
 
 			var phone = document.getElementById("sendOtpId").value;
@@ -4997,7 +4970,7 @@
 				$.ajax
 					({
 						type: "POST",
-						action: './js/Google Sheet.js',
+						action: './js/MainQueryForm.js',
 						data: { "phone": phone },
 						success: function (data) {
 
