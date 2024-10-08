@@ -30,12 +30,6 @@
 
 	 <!-- jQuery Library -->
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-	 <!-- Google Maps JavaScript library with Places API -->
-	 <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=YOUR_API_KEY"></script>
-   
-	<script src="../ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
 	<script src="../maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 	<script src="../cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
@@ -48,10 +42,6 @@
 	<script type="text/javascript" src="../storage.googleapis.com/gpswebsite-cdn/js/leaflet.js"></script>
 
 	<script type="text/javascript" src="../storage.googleapis.com/gpswebsite-cdn/js/select2.min.js"></script>
-
-	<!-- google api for geolocation -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
-
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-89128249-1"></script>
@@ -1780,10 +1770,10 @@
 									class="select2-selection select2-selection--multiple"
 									role="combobox" aria-haspopup="true" aria-expanded="false"><ul
 											class="select2-selection__rendered">
-											<li class="select2-search select2-search--inline"><input
-												class="select2-search__field" type="search" tabindex="0"
+											<li class="select2-search select2-search--inline">
+												<input class="select2-search__field" type="search" tabindex="0"
 												autocomplete="off" autocorrect="off" autocapitalize="none"
-												spellcheck="false" role="textbox" id="search-input" placeholder="Enter your address"
+												spellcheck="false" role="textbox" id="location" placeholder="Enter your address"
 												style="width: 536.5px;"></li>
 										</ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
 
@@ -8996,7 +8986,7 @@
 												<h2 class="enquiry-h2">Enter Your Locality</h2>
 												<div class="form-group">
 													<label for="text"></label> <input type="text" required=""
-														placeholder="Enter Location" id="autocomplete"
+														placeholder="Enter Location" id="location"
 														class="form-control pac-target-input" name="location"
 														autocomplete="off">
 													<p style="margin-left: 10px;">
@@ -9289,27 +9279,24 @@
 
 	<script src="./js/Google Sheet.js"></script>
 
-	<script>
-	    var searchInput = 'search-input';
-
+	<script type="text/javascript">
 	    $(document).ready(function () {
 	      var autocomplete;
+		  var id='location';
+
 	      autocomplete = new google.maps.places.Autocomplete(
-	        document.getElementById(searchInput),
+	        document.getElementById(id),
 	        {
-	          types: ['establishment']
+	          types: ['geocode']
 	        }
 	      );
 
-	      google.maps.event.addListener(autocomplete, 'place_changed', function () {
-	        var near_place = autocomplete.getPlace();
-	      });
 	    });
 	</script>
 
 
 	<script
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiQk-jVBIRKkYgO5b2sKcoy1HTFm1FZ28&amp;libraries=places&amp;callback=initAutocomplete"
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAr5ekSPTaPLMWwyvbW0FHpKGI4cwtpatc&amp;libraries=places&amp;callback=initAutocomplete"
 		async defer>
 	</script>
 
