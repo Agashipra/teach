@@ -1,0 +1,802 @@
+
+
+<!DOCTYPE HTML>
+<html>
+
+<!-- Mirrored from www.teachbuddies.com/payment2.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2024 18:07:53 GMT -->
+<head>
+<title>TeachBuddies: Online Payment for Tuition Fees, Tutor Registration Fees</title>
+<meta name="description" content="We provide very easy online payment options for both of our student for Tuition fees and our tutors for registration fees at cone place.">
+
+
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+ <link rel="stylesheet" href="../maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ 
+<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+
+ <script src="js/jquery-1.11.0.min.js"></script> 
+  <script src="../maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="../checkout.razorpay.com/v1/checkout.js"></script>
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+
+<!-- <script src="js/testimonial.js"></script> -->
+<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+<!-- Custom Theme files -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<!-- Custom Theme files -->
+ <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+<!-- <meta http-equiv="Content-type" value="text/html; charset=UTF-8" /> -->
+
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--Google Fonts-->
+<link href='http://fonts.googleapis.com/css?family=Hind:400,300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+ <link rel='stylesheet' href='../use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&amp;display=swap" rel="stylesheet">
+
+<!--google fonts-->
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+
+
+	<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+</script>
+<!-- //end-smoth-scrolling -->
+<!-- animated-css -->
+		<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+		<script src="js/wow.min.js"></script>
+		<script>
+		 new WOW().init();
+		</script>
+<!-- animated-css -->
+<script src="js/bootstrap.min.js"></script>
+<link href="css/galleryeffect.css" rel="stylesheet" type="text/css" media="all" />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89128249-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<style>
+ #playground-container {
+    height: 500px;
+    overflow: hidden !important;
+    -webkit-overflow-scrolling: touch;
+}
+body, html{
+     height: 100%;
+ 	background-repeat: no-repeat;
+ 	font-family: 'Oxygen', sans-serif;
+	    background-size: cover;
+}
+
+.main{
+ 	margin:0px 15px 20px 15px;
+}
+
+h1.title { 
+	font-size: 50px;
+	font-family: 'Passion One', cursive; 
+	font-weight: 400; 
+}
+
+hr{
+	width: 10%;
+	color: #fff;
+}
+
+.form-group{
+	margin-bottom: 15px;
+}
+
+label{
+	margin-bottom: 15px;
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 11px;
+    padding-top: 3px;
+}
+
+.main-login{
+ 	background-color: #fff;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
+}
+.form-control {
+    height: auto!important;
+padding: 8px 12px !important;
+}
+.input-group {
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
+}
+#button {
+    border: 1px solid #ccc;
+    margin-top: 28px;
+    padding: 6px 12px;
+    color: #666;
+    text-shadow: 0 1px #fff;
+    cursor: pointer;
+    -moz-border-radius: 3px 3px;
+    -webkit-border-radius: 3px 3px;
+    border-radius: 3px 3px;
+    -moz-box-shadow: 0 1px #fff inset, 0 1px #ddd;
+    -webkit-box-shadow: 0 1px #fff inset, 0 1px #ddd;
+    box-shadow: 0 1px #fff inset, 0 1px #ddd;
+    background: #f5f5f5;
+    background: -moz-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f5f5f5), color-stop(100%, #eeeeee));
+    background: -webkit-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+    background: -o-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+    background: -ms-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+    background: linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f5f5', endColorstr='#eeeeee', GradientType=0);
+}
+.main-center{
+ 	margin-top: 30px;
+ 	margin: 0 auto;
+ 	max-width: 400px;
+    padding: 10px 40px;
+	background:#009edf;
+	    color: #FFF;
+    text-shadow: none;
+	-webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+-moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+
+}
+span.input-group-addon i {
+    color: #009edf;
+    font-size: 17px;
+}
+
+.login-button{
+	margin-top: 5px;
+}
+
+.login-register{
+	font-size: 11px;
+	text-align: center;
+}
+
+#SuccessmessageId {
+
+	color: green;
+	
+}
+  
+ 
+ /* modal css */ 
+  
+	body{font-family: 'Poppins', sans-serif;}
+	
+	
+/* 	@media (max-width: 767px) { */
+/* 	 .modal-fullscreen-xs-down { */
+/* 		 padding: 0 !important; */
+/* 	} */
+/* 	 .modal-fullscreen-xs-down .modal-dialog { */
+/* 		 width: 100%; */
+/* 		 height: 100%; */
+/* 		 margin: 0; */
+/* 		 padding: 0; */
+/* 	} */
+/* 	 .modal-fullscreen-xs-down .modal-content { */
+/* 		 height: auto; */
+/* 		 min-height: 100%; */
+/* 		 border: 0 none; */
+/* 		 border-radius: 0; */
+/* 		 box-shadow: none; */
+/* 	} */
+/* } */
+/*  @media (max-width: 991px) { */
+/* 	 .modal-fullscreen-sm-down { */
+/* 		 padding: 0 !important; */
+/* 	} */
+/* 	 .modal-fullscreen-sm-down .modal-dialog { */
+/* 		 width: 100%; */
+/* 		 height: 100%; */
+/* 		 margin: 0; */
+/* 		 padding: 0; */
+/* 	} */
+/* 	 .modal-fullscreen-sm-down .modal-content { */
+/* 		 height: auto; */
+/* 		 min-height: 100%; */
+/* 		 border: 0 none; */
+/* 		 border-radius: 0; */
+/* 		 box-shadow: none; */
+/* 	} */
+/* } */
+/*  @media (max-width: 1199px) { */
+/* 	 .modal-fullscreen-md-down { */
+/* 		 padding: 0 !important; */
+/* 	} */
+/* 	 .modal-fullscreen-md-down .modal-dialog { */
+/* 		 width: 100%; */
+/* 		 height: 100%; */
+/* 		 margin: 0; */
+/* 		 padding: 0; */
+/* 	} */
+/* 	 .modal-fullscreen-md-down .modal-content { */
+/* 		 height: auto; */
+/* 		 min-height: 100%; */
+/* 		 border: 0 none; */
+/* 		 border-radius: 0; */
+/* 		 box-shadow: none; */
+/* 	} */
+/* } */
+/*  .modal-fullscreen { */
+/* 	 padding: 0 !important; */
+/* } */
+/*  .modal-fullscreen .modal-dialog { */
+/* 	 width: 100%; */
+/* 	 height: 100%; */
+/* 	 margin: 0; */
+/* 	 padding: 0; */
+/* } */
+/*  .modal-fullscreen .modal-content { */
+/* 	 height: auto; */
+/* 	 min-height: 100%; */
+/* 	 border: 0 none; */
+/* 	 border-radius: 0; */
+/* 	 box-shadow: none; */
+/* } */
+
+.modal-footer{border:none !important;}
+
+.fl{float:left}
+.fr{float:right;font-weight:600}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+   
+    border-top: none;
+}
+
+
+.table_div{padding:10px 100px;text-align: center;}
+
+@media(max-width:600px){
+
+.table_div{padding:10px 2px}
+
+}
+
+.btn-padding{padding:10px 30px}  
+  
+  
+  
+  @media(max-width:600px){
+  
+  .modal-body {
+    position: relative;
+    padding: 1px !important;
+}
+  }
+  
+</style>
+
+</head>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript" src="js/offlineChat_tawk.js"></script>
+<!--End of Tawk.to Script-->
+<body>
+<div >
+	<div class="fixed-header">	
+
+		    <div class="navbar-wrapper">
+        
+            
+		      <div class="container">
+              
+		        <nav class="navbar navbar-inverse navbar-static-top">
+		             <div class="navbar-header">
+			              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			                <span class="sr-only">Toggle navigation</span>
+			                <span class="icon-bar"></span>
+			                <span class="icon-bar"></span>
+			                <span class="icon-bar"></span>
+			              </button>
+			              <!-- <div class="logo  slideInLeft"  style="width:80%;height:auto">
+			                    <a class="navbar-brand" href="index.html"><img class="img-responsive" src= style="" /></a>
+			              </div> -->
+			          </div>
+		            <div id="navbar" class="navbar-collapse collapse">
+		            <nav class="cl-effect-1">
+		              <ul class="nav navbar-nav">
+		               <li><a href="index.html" class="active scroll">Home</a></li>
+		                
+                      
+                        
+                 
+           
+												
+		              </ul>
+		            </nav>
+		            <!-- script-for sticky-nav -->
+	<!-- 	<script>
+		$(document).ready(function() {
+			 var navoffeset=$(".header").offset().top;
+			 $(window).scroll(function(){
+				var scrollpos=$(window).scrollTop(); 
+				if(scrollpos >=navoffeset){
+					$(".header").addClass("fixed");
+				}else{
+					$(".header").removeClass("fixed");
+				}
+			 });
+			 
+		});
+		</script> -->
+		<!-- /script-for sticky-nav -->
+
+		            </div>
+		            <div class="clearfix"> </div>
+		             </nav>
+		          </div>
+		           <div class="clearfix"> </div>
+		    </div>
+	 </div>
+</div>
+<!--header end here-->
+<div class="about-top">
+<h2>Online Payment</h2>
+<span class="heading-line"> </span>
+				<p>Save Time.</p>
+</div>
+
+<section id="registration-page" class="container">
+
+<div class="container">
+			<div class="row main">
+				<div class="main-login main-center">
+				      <h1 style="text-align:center;margin-bottom:20px;">Pay Now</h1>
+				     
+				<!--    <form  class="" method="post" action="paytmRedirect.jsp">  				 
+				 -->	 <form id="razorPayId" class="">
+					 	
+						<div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Your Name</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+					 				<input type="text" required class="form-control" name="firstname" id="name_id"  placeholder="Enter your Name" />
+					<!--  			<input type="text" required class="form-control" name="name" id="name"  placeholder="Enter your Name" />
+					 -->				</div>
+							</div>
+						</div> 
+
+						<div class="form-group">
+							<label for="email" class="cols-sm-2 control-label">Your Email</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+							 		<input required type="email" class="form-control" name="email" id="email_id"  placeholder="Enter your Email" />
+							 	<!-- 		<input required type="email" class="form-control" name="EMAIL" id="email"  placeholder="Enter your Email" />
+						 -->	</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="phone" class="cols-sm-2 control-label">Your Phone Number</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
+							 		<input type="text" class="form-control" required name="phone" id="username"  placeholder="Enter your Phone Number" />
+							 	<!-- 	<input type="number" class="form-control" required name="MOBILE_NO" id="username"  placeholder="Enter your Phone Number" />
+								 --></div>
+							</div>
+						</div>
+
+						<!-- <div class="form-group">
+							<label for="amount" class="cols-sm-2 control-label">I am a</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+								    <input type="radio"  required name="productinfo" value="Home Tutor">Home Tutor<br>
+                                   <input type="radio" required name="productinfo" value="Student/Parent">Student/Parent 
+    								
+								</div>
+							</div>
+						</div> -->
+<!-- 
+<input type="hidden" name="productinfo" value="Home Tutor">
+	 -->
+						<div class="form-group">
+							<label for="confirm" class="cols-sm-2 control-label">Amount to be Paid</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-rupee fa-lg" aria-hidden="true"></i></span>
+			
+						
+							 	<input type="text" class="form-control" id="amountId" required name="amount" placeholder="Enter Amount" />
+							<!--  	<input type="number" class="form-control" required name="TXN_AMOUNT" placeholder="Enter Amount"   />
+							 -->	
+								
+					 			<input type="hidden" name="currency" value="INR">
+								<input type="hidden" name="order_id" id="order_id">
+									
+								</div>
+							</div>
+						</div>
+								 			
+		 		<input type="hidden" name="RazorPayGateway" value="RazorPayICICI">
+<!-- 						<input type="hidden" name="RazorPayGateway" value="Four">
+ -->		 				
+<!-- 					<input type="submit"class="btn btn-primary btn-lg btn-block login-button" value="Proceed to Pay" onclick="Pay(event);" >
+ -->						 
+ 		<!-- 					<input  type="submit" id="button" class="btn btn-primary btn-lg btn-block login-button" value="Proceed to Pay" > -->
+  
+<input type="submit" class="btn btn-primary btn-lg btn-block login-button" value="Proceed to Pay" onclick="Pay(event);" style="background: white;color: black;">
+ 						
+						<!-- <div class="form-group ">
+							<input type="submit" id="button" class="btn btn-primary btn-lg btn-block login-button" value="Proceed to Pay" onclick="Pay(event)" >
+						</div> -->
+						
+					</form>
+				</div>
+			</div>
+			
+			<center><div id="SuccessmessageId"></</div></center>
+	 <br>
+	<div ><center><img class="img-responsive text-center" src="image/RazorPay.png"> </center> </div>
+	 
+		</div>
+
+ </section>
+ <br><br>
+ <!--copy rights start here-->
+
+<div class="copy-right">
+	<div class="container">
+		 <div class="copy-rights-main wow zoomIn" data-wow-delay="0.3s">
+    	    <p>	&copy; 2016-<script>document.write(new Date().getFullYear());</script> TeachBuddies.com (Tenali Education Academy Pvt. Ltd.) All Rights Reserved</p>
+    	 </div>
+    </div>
+    
+						<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+</div>
+
+<!-- Modal -->
+
+<div class="modal fade  " id="modalLargepayment" tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="modalLargepayment" style="padding-right: 0px !important;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+     
+      <div class="modal-body" style="padding:0px !important;">
+    <div align="center" style="margin-top:30px">
+		<h1 style="font-size: 30px;color: green;font-family: roboto;font-weight: 400;">Payment Successfull!</h1>
+	</div>
+	<div  align="center">
+		<img src="images/check.png" style="width: 123px; padding: 22px;">
+	</div>
+	
+	<div class="table_div">
+		<table class="table">
+			<!-- <tr>
+				<td class="fl">Payment Type</td>
+				<td class="fr">Net Banking</td>
+			</tr>	
+			<tr>
+				<td class="fl">Bank</td>
+				<td class="fr">HDFC</td>
+			</tr>	 -->
+			
+			<tr>
+				<td class="fl">Name</td>
+				<td class="fr" id="nametd"> </td>
+			</tr>	
+			<tr>
+				<td class="fl">Email</td>
+				<td class="fr" id="emailtd"></td>
+			</tr>
+			
+			<tr>
+				<td class="fl">Mobile</td>
+				<td class="fr" id="mobiletd"></td>
+			</tr>
+				
+			<tr>
+				<td class="fl" style=" padding: 20px 10px;font-weight:600">Amount paid</td>
+				<td class="fr" style=" padding: 20px 10px;" id="amounttd"></td>
+			</tr>
+			<tr>
+				<td class="fl">Order Id</td>
+				<td class="fr" id="ordertd"></td>
+			</tr>
+		
+		</table>
+<!--         <button type="button" class="btn btn-primary btn-padding" >Print</button> -->
+		 <button type="button" class="btn btn-primary btn-padding" data-dismiss="modal">Close</button>
+	</div>
+      </div>
+      <div class="modal-footer" align="center">
+       
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+$(document).ready(function(){
+	$("#modalLargepayment").modal({
+	show:false,
+	backdrop:'static'
+	});
+	});
+
+
+
+
+
+function Pay(e)
+{
+	
+	e.preventDefault();
+	
+
+//	alert("Inside Pay ");
+	
+	var amount=parseInt((document.getElementById("amountId").value))*100;
+
+	var name1=document.getElementById("name_id").value;
+
+	var email1=document.getElementById("email_id").value;
+
+	var contact1=document.getElementById("username").value;
+	
+	
+	
+//	alert(document.getElementById("amountId").value);
+	
+	
+
+	
+//	console.log(amount+" amount1");
+	
+//	console.log(name1+" name1");
+	
+//	console.log(email1+" email1");
+	
+//	console.log(contact1+" contact1");
+
+
+	
+
+
+
+
+	
+$.ajax({
+	
+    type:"POST",
+    url : "/RazorPayOrderId",
+   // data:{"amount":amount,"RazorPayGateway":"Four"},
+    data:{"amount":amount,"RazorPayGateway":"RazorPayICICI"},
+	   success:function(data)
+    {
+
+        var arr = JSON.parse(data);
+		
+  //  	alert(arr.OrderId1);
+    	
+    	
+    	var OrderId= arr.OrderId1;
+    	document.getElementById("order_id").value=OrderId;
+    	
+    	  $.ajax({
+    	      type:"POST",
+    	      url:"/RazorPayPaymentTryingNotification",
+    	      data:$("#razorPayId").serialize(),
+    	      success:function(data)
+    	      {
+    	 
+    	  
+    	      }
+    	      
+    	      }); 
+    	
+    
+    	
+    	var options = {
+    			
+    		/* 	rzp_test_hpRLU97dRzEb3Q  Test
+    			
+    			rzp_live_ZDiFwT6zy8uO2u  Live */
+    			
+    			/* rzp_test_MU0FVyCE3YKJ2f Razor Pay Test Two */
+    			
+    			
+    			/* rzp_live_T7WxUTmHznTbkR Razor Pay Live Two*/
+    			
+    			
+    			/* rzp_test_8ngheq1d3ZBcmD Razor Pay Icici Test */
+    			
+    			/* rzp_live_UGEYxsg6CuEyGG Razor Pay Icici Live */
+    			
+    		    "key": "rzp_live_UGEYxsg6CuEyGG", // Enter the Key ID generated from the Dashboard
+    		    "amount":parseInt(amount), // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+    		    "currency": "INR",
+    		    "name": "TeachBuddies ICICI",
+    		    "description": "Tutor Registration",
+    		    "image": "https://www.teachbuddies.com/images/logo.png",
+    		   
+    		  /*
+    		    "key": "rzp_live_gYP5jGnpjvM3HN", // Enter the Key ID generated from the Dashboard
+    		    "amount":parseInt(amount), // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+    		    "currency": "INR",
+    		    "name": "TeachBuddies",
+    		    "description": "Tutor Registration",
+    		    "image": "https://www.teachbuddies.com/images/logo.png",
+    		  */
+    		    
+    		    "order_id":OrderId, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+    		    "handler": function (response){
+    		    	
+    		//     	alert(response+"  response");
+    		    	
+    		//       alert(response.razorpay_payment_id);
+    		//       alert(response.razorpay_order_id);
+    		//       alert(response.razorpay_signature);
+    		        
+    		        
+    		        $.ajax({
+    		        	
+    		            type:"POST",
+    		            url : "/RazorPaySignature",
+    		            data :{"orderId":OrderId,"razorPayPaymentId":response.razorpay_payment_id,"razorPaySignature":response.razorpay_signature,"RazorPayGateway":"RazorPayICICI"},
+    			  //  	    data :{"orderId":OrderId,"razorPayPaymentId":response.razorpay_payment_id,"razorPaySignature":response.razorpay_signature,"RazorPayGateway":"Four"},
+
+    		            success:function(data)
+    		            {
+
+    		           // 	alert(data);
+    		            	
+    		            	var arr1 = JSON.parse(data);
+    		          		
+    		           //   	alert(arr.OrderId1);
+    		           
+    		           //     console.log(arr1.status+" Status");
+    		              	
+    		              	if(arr1.status==="Verified")
+    		              	{
+    		              		
+    		              	document.getElementById("nametd").innerHTML= name1;	
+    		              	document.getElementById("emailtd").innerHTML=email1;
+    		              	document.getElementById("mobiletd").innerHTML=contact1;
+    		              	document.getElementById("amounttd").innerHTML=document.getElementById("amountId").value;
+    		              	document.getElementById("ordertd").innerHTML=OrderId;
+    		              		
+    		              		
+    		              		
+    		              		
+    		              		
+    		             // 	document.getElementById("SuccessmessageId").innerHTML = "Payment has been Successful"	
+    		              	
+    		              	
+    		              		/* setTimeout(function(){ 
+    		              			location.reload();
+
+    		              				}, 3000);  */
+    		              	
+    		              		$('#modalLargepayment').modal('show'); 		
+    		              				
+    		              		
+    		              		}
+    		            	
+    		            
+
+    		            }
+    		            
+    		            });
+    		        
+    		        
+    		    },
+    		    "prefill": {
+    		        "name":name1,
+    		        "email":email1,
+    		        "contact":contact1
+    		    },
+    		    "notes": {
+    		        "address": "Razorpay Corporate Office"
+    		    },
+    		    "theme": {
+    		        "color": "#F37254"
+    		    }
+    		};
+    	
+    	var rzp1 = new Razorpay(options);
+    	
+  //  	alert(options.prefill.name);
+  //  	alert(options.prefill.email);
+  //  	alert(options.prefill.contact);
+    	
+    	rzp1.open();
+    	
+    	
+
+    }
+    
+      });
+}    
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+ 
+
+    <script type="text/javascript">
+										$(document).ready(function() {
+											/*
+											var defaults = {
+									  			containerID: 'toTop', // fading element id
+												containerHoverID: 'toTopHover', // fading element hover id
+												scrollSpeed: 1200,
+												easingType: 'linear' 
+									 		};
+											*/
+											
+											$().UItoTop({ easingType: 'easeOutQuart' });
+											
+										});
+									</script>
+						<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+</div>
+
+
+</body>
+
+<!-- Mirrored from www.teachbuddies.com/payment2.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Aug 2024 18:07:56 GMT -->
+</html>
