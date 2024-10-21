@@ -12,7 +12,9 @@
 
 
     <style>
+        
         body {
+            
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -22,6 +24,27 @@
             height: 100vh;
             background-color: #538392;
         }
+        .home {
+            text-decoration: none;
+            color: skyblue; /* Link text color */
+        }
+
+        .home-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff; /* Blue background */
+            color: white; /* White text */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
         .container {
             background-color: #F5F7F8;
             border-radius: 8px;
@@ -70,6 +93,16 @@
     </style>
 </head>
 <body>
+    <div class="home">
+        <nav class="cl-effect-1">
+            <ul class="home">
+             <li><a href="index.html" class="home">
+                 <button class="home-btn">Go to Homepage</button></a>
+            </li>
+    
+            </ul>
+          </nav>
+    </div>
     <div class="container">
         
         <div class="qr-section">
