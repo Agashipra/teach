@@ -16,73 +16,24 @@ paymentForm.addEventListener('submit', function(event) {
         alert("Please fill in all the fields.");
         return;
     }
-    if(phone.length != 10){
-        alert("Please enter correct Phone Number")
-        return;   
+    if (phone.length != 10) {
+        alert("Please enter a valid 10-digit phone number.");
+        return;
     }
 
-    // Process the form data (Here you can handle payment logic or send the data via AJAX)
-    alert(`"Payment Details Has Been Shared!"
-    Name: ${name}
-    Email: ${email}
-    Phone: ${phone}
-    Amount: ₹${amount}`);
-    // Redirect to the payment page
-    window.location.href = './paymentPage.html';
-
-    // Example: You can send the data to the server using fetch or AJAX.
-    // For example, if you want to send data to a server:
-    /*
-    fetch('/paymentHandler', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            name: name,
-            email: email,
-            phone: phone,
-            amount: amount
-        })
+    // Process the form data (Handle payment logic or send data via AJAX)
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxEvsRgaoDuaToAXG1E5WOq9UxWYEdoG0-tB40MaPbXQsa3I7bwwNCHNSqvgDLKRi_Y/exec'; // Add your script URL here
+    
+    // Send form data to the server using fetch
+    fetch(scriptURL, { 
+        method: 'POST', 
+        body: new FormData(paymentForm) 
     })
-    .then(response => response.json())
-    .then(data => {
-        console.log('Payment processed:', data);
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Error: ${response.statusText}`);
+        }
+        window.location.href = './paymentPage.html';  // Ensure this path is correct
     })
-    .catch(error => {
-        console.error('Error:', error);
-    });
-    */
+    .catch(error => console.error('Error:', error.message));
 });
-
-
-
-// OLD CODE 
-
-// function proceedToPay() {
-//     alert("Payment Details Has Been Shared!");
-//     window.location.href = './paymentPage.html';
-// }
-
-// export const paymentUtils = {
-//     proceedToPay,
-// };
-
-
-// // const scriptURL = '' // Add your script URL here
-
-// // const form = document.forms['paymentForm']
-
-// // form.addEventListener('submit', e => {
-// //     e.preventDefault()
-// //     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-// //         .then(response => {
-// //             if (response.ok) {
-// //                 throw new Error(`Error: ${response.statusText}`);
-// //             }else{
-// //                 alert("Payment Details Has Been Shared!");
-// //                 window.location.href = '../payment1.html'; // Ensure this path is correct
-// //             }
-// //         })
-// //         .catch(error => console.error('Error:', error.message));
-// // });
