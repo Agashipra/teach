@@ -13,7 +13,8 @@
 	<link rel="icon" type="image/png" href="../www.teachbuddies.com/newImg/TeachBuddies_LOGO-removebg-preview.png" />
 	<link rel="stylesheet" href="..//storage.googleapis.com/gpswebsite-cdn/newCss/bootstrap.min.css">
 	<link rel="stylesheet" href="Google Sheet.css">
-	
+	<link rel="stylesheet" href="register-form.js">
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 	<link rel="stylesheet" type="text/css" href="..//storage.googleapis.com/gpswebsite-cdn/css/leaflet.css">
 	<link rel="stylesheet" type="text/css" href="..//storage.googleapis.com/gpswebsite-cdn/css/select2.css">
@@ -338,8 +339,8 @@
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">More <span><i class="fas fa-chevron-down"></i></span></a>
 					<ul class="dropdown-menu">
-						<!-- <li><a  href="https://blog.gharpeshiksha.com/">Blog</a></li> -->
-						<!-- <li> <a href="https://study.gharpeshiksha.com/" >Study Materials</a></li> -->
+						<!-- <li><a  href="https://blog..com/">Blog</a></li> -->
+						<!-- <li> <a href="https://study..com/" >Study Materials</a></li> -->
 						<li><a href="about-us.html">About Us</a></li>
 						<li><a href="privacy-policy.html">Privacy Policy</a></li>
 						<!-- <li><a  href="refund-cancellation-policy.html">Refund and Cancellation Policy</a></li>
@@ -5691,7 +5692,7 @@
 			<ul class="list-inline" style="text-align:center">
 				<li class="list-inline-item"><a target="_blank" href="https://www.facebook.com/teachbuddies"><i
 							class="fab facebook footer-social-icon fa-facebook-f"></i></a></li>
-				<!-- <li class="list-inline-item"><a target="_blank" href="https://twitter.com/gharpeshiksha/"><i
+				<!-- <li class="list-inline-item"><a target="_blank" href="https://twitter.com//"><i
 									class="fab twitter footer-social-icon fa-twitter"></i></a></li> -->
 				<li class="list-inline-item"><a target="_blank" href="https://teachbuddies.com/"><i
 							class="fab google footer-social-icon fa-google"></i></a></li>
@@ -6979,7 +6980,7 @@
 								<h4 style="color:#337ab7; font-weight: bold;text-align:center;margin-bottom:30px">Become
 									Part of our Team</h4>
 								<div class="col-lg-12">
-									<form id="register-form_tutor" role="form" style="display:block" id="form-sec">
+									<form id="register-form_tutor" method="post" action="" role="form" style="display:block" id="form-sec">
 										<input type="hidden" class="tracking_source" name="tracking_source"
 											id="tracking_source">
 										<section class="enquiry-section">
@@ -7327,7 +7328,7 @@
 				const phone = $(this).val();
 
 				$.ajax({
-					url: "https://api.gharpeshiksha.com/TutorLogin/verified",
+					url: "",
 					type: "POST",
 					data: { phone: phone },
 					success: function (data) {
@@ -7560,7 +7561,7 @@
 				if (nakeddomaain == -1) {
 					url = "http://localhost:8080/";
 					//  url="https://3-dot-gpschat.appspot.com";
-					//url="https://gharpeshiksha.com";
+					//url="https://.com";
 				} else {
 					//url="http://localhost:8080";
 					//  	url="https://www.3-dot-gpschat.appspot.com";

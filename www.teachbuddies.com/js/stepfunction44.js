@@ -12,14 +12,14 @@ var nakeddomaain = url.search('www.');
 if (nakeddomaain == -1) 
 {
 	//url="http://localhost:8080/";
-	url="https://gharpeshiksha.com";
+	url="https://teachbuddies.com";
     //  url="https://3-dot-gpschat.appspot.com";	
 } 
 else 
 {
 	//url="http://localhost:8080/";
 	
-	url="https://www.gharpeshiksha.com";
+	url="https://www.teachbuddies.com";
     // url="https://www.3-dot-gpschat.appspot.com";
 }
 
@@ -802,14 +802,14 @@ else if(!emailMatch)
         
    	 $.ajax({
    		 type:"POST",
-   		 url:"https://api.gharpeshiksha.com/OnlineCourseStudentLogin/studentSignUpLanding",
+   		 url:"https://api.teachbuddies.com/OnlineCourseStudentLogin/studentSignUpLanding",
    		 
    		 data:{"name":name,"course":course,"phone":phone,},
    		 success:function(data){
    			 // alert(data.Message);
    			 /*if(data.Message==="Account already exists"){
 				 
-				window.location="https://learn.gharpeshiksha.com/url/"+document.getElementById("phone").value+"/"+document.getElementById("phone").value;
+				window.location="https://learn.teachbuddies.com/url/"+document.getElementById("phone").value+"/"+document.getElementById("phone").value;
 					
 				return false;
 			 }
@@ -820,7 +820,7 @@ else if(!emailMatch)
    				 
    				 				  
    			  document.getElementById("err-msg1").innerHTML=data.Message;
-   			  document.getElementById("showLogin").innerHTML='<a href="https://learn.gharpeshiksha.com/login" target=\"_blank\" style=\"background: #236cb5;padding: 5px 20px; color: #fff;\">Sign IN Here!</a>';
+   			  document.getElementById("showLogin").innerHTML='<a href="https://learn.teachbuddies.com/login" target=\"_blank\" style=\"background: #236cb5;padding: 5px 20px; color: #fff;\">Sign IN Here!</a>';
    			 document.getElementById('step1Next').style.display = 'none';
    			  return false;
    			  
@@ -912,13 +912,13 @@ function step4Next() {
 
       	$.ajax({
 			 type:"POST",
-			 url:"https://api.gharpeshiksha.com/OnlineCourseStudentLogin/studentInfoLanding",
+			 url:"https://api.teachbuddies.com/OnlineCourseStudentLogin/studentInfoLanding",
 			 //data:$("#formnew2").serialize(),
 			 data:{"board":boardM,"city":cityM,"school":schoolM,"phone":numOTP,"state":StateName},
 			 
 			 success:function(data){
 				 
-				 window.location="https://learn.gharpeshiksha.com/url/"+document.getElementById("sendOtpId").value+"/"+document.getElementById("sendOtpId").value;
+				 window.location="https://learn.teachbuddies.com/url/"+document.getElementById("sendOtpId").value+"/"+document.getElementById("sendOtpId").value;
 
 			      	
 		
@@ -943,7 +943,7 @@ function step4Next() {
   var StateNameFrom= document.getElementById("SelectedStatesForm").value;
 		 $.ajax({
 			 type:"POST",
-			 url:"https://api.gharpeshiksha.com/OnlineCourseStudentLogin/studentInfoLanding",
+			 url:"https://api.teachbuddies.com/OnlineCourseStudentLogin/studentInfoLanding",
 			 //data:$("#formnew2").serialize(),
 			 data:{"board":board1,"city":city1,"school":school1,"phone":numm,"state":StateNameFrom},
 			 
@@ -1487,7 +1487,7 @@ function step11Next(){
 	  		 document.getElementById('err-msg10').innerHTML="Please Enter OTP";
 	  		  return false;		   
 	  		 }
-	  		 document.getElementById("err-msg10").innerHTML="<img id=\"loading-image\" src=\"https://www.gharpeshiksha.com/images/loading.gif\" alt=\"Loading...\" />";
+	  		 document.getElementById("err-msg10").innerHTML="<img id=\"loading-image\" src=\"https://www.teachbuddies.com/images/loading.gif\" alt=\"Loading...\" />";
 	  		document.getElementById("stepFinal").style.display="none";
 	  		
 	  		 var xhttp = new XMLHttpRequest();
@@ -1568,7 +1568,7 @@ function step11Next(){
 		 $.ajax({
 			 
 			 type:"POST",
-			 url:"https://api.gharpeshiksha.com/OnlineCourseStudentLogin/verifyotp",
+			 url:"https://api.teachbuddies.com/OnlineCourseStudentLogin/verifyotp",
 			data:{"otp":optDial,"sessionId":sess,"otp_phone":otp_P},
 			 //data:$("#enquirystepsform").serialize(),
 			 success:function(data){
@@ -1585,7 +1585,7 @@ function step11Next(){
 				 else
 				 {
 				 
-				 window.location="https://learn.gharpeshiksha.com/url/"+document.getElementById("otp_phone").value+"/"+document.getElementById("otp_phone").value;
+				 window.location="https://learn.teachbuddies.com/url/"+document.getElementById("otp_phone").value+"/"+document.getElementById("otp_phone").value;
 		
 				 }
 		

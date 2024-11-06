@@ -30,11 +30,11 @@ var currentStep = 0;
    var nakeddomaain=url.search( 'www.' );
    if(nakeddomaain==-1)
    {
-    	url="https://gharpeshiksha.com";
+    	url="https://teachbuddies.com";
 	 // url="https://3-dot-gpschat.appspot.com";	
   //url="http://localhost:8080/";
    }else{
-   	url="https://www.gharpeshiksha.com";
+   	url="https://www.teachbuddies.com";
 	   
    		 //url="http://localhost:8080/";
 		//  url="https://www.3-dot-gpschat.appspot.com";
