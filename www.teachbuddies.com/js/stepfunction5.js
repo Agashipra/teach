@@ -221,7 +221,7 @@ $("#enqformstep0").css("opacity", "1");
               //currentStep=0; 
 			   
 			   current_fs.show();
-//$("#enqformstep1,#enqformstep2,#enqformstep3,#enqformstep4,#enqformstep5,#enqformstep5,#enqformstep6,#enqformstep7,#enqformstep8,#enqformstep9,#enqformstep10,#enqformstep11,#enqformstep12").css("opacity", "1");
+//$("#enqformstep1,#enqformstep2,#enqformstep3,#enqformstep4,#enqformstep5,#enqformstep5,#enqformstep6,#enqformstep7,#enqformstep9,#enqformstep10,#enqformstep11,#enqformstep12").css("opacity", "1");
  document.getElementById("enquirystepsform").reset();
  document.getElementById("tutorregister").reset();
 	//	$("#step"+currentStep+"Next").show();
@@ -655,11 +655,11 @@ function step6Next(){
 				//alert(currentStep);
 				
 current_fs = $('#enqformstep6');
-	next_fs = $('#enqformstep8');
+	next_fs = $('#enqformstep9');
 next_fs.show();	
 $("#enqformstep6").css({"opacity": "0", "transform": "scale(1)","position":"relative","display":"none"});
 $("#enqformstep6").hide();
-		$("#enqformstep8").css({"opacity": "1","display":"block"});
+		$("#enqformstep9").css({"opacity": "1","display":"block"});
 		
 	}
 	
@@ -972,8 +972,8 @@ if((mode=="Home Tuition at Your Home,")  && currentStep==7)
 
 currentStep = 6;
 
-$("#enqformstep8").css({"opacity": "0", "transform": "scale(1)","position":"relative","display":"none"});
-$("#enqformstep8").hide();
+$("#enqformstep9").css({"opacity": "0", "transform": "scale(1)","position":"relative","display":"none"});
+$("#enqformstep9").hide();
 
 		
 
