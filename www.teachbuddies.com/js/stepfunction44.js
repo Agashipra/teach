@@ -1426,7 +1426,7 @@ function step11Next(){
 	  		  return false;		   
 	  		 }
 	  		 document.getElementById("err-msg10").innerHTML="<img id=\"loading-image\" src=\"https://www.teachbuddies.com/images/loading.gif\" alt=\"Loading...\" />";
-	  		document.getElementById("stepFinal").style.display="none";
+	  		documentst .getElementById("stepFinal").style.display="none";
 	  		
 	  		 var xhttp = new XMLHttpRequest();
 	  		   xhttp.open("POST", "/enquiry", true);
