@@ -1090,7 +1090,7 @@ currentStep += 1;
 
 	current_fs = $('#enqformstep'+(currentStep-1));
 	next_fs = $('#enqformstep'+(currentStep-1)).next();
-	  // $('#step7Next').attr('id','step9Next');		   
+	  // $('#step7Next').attr('id','step8Next');		   
 }
 
 
@@ -1099,6 +1099,58 @@ currentStep += 1;
 
 function step8Next() {
     //alert(currentStep);
+
+    var lat1 = document.getElementById("latbox1").value;
+    var lng1 = document.getElementById("lngbox1").value;
+    var location1;
+    
+    if(document.getElementById("autocomplete")==undefined)
+	   {
+		   
+    	location1=document.getElementById("autocomplete1").value;
+    	
+	   }
+	   else
+	   { 
+		   
+		   location1=document.getElementById("autocomplete").value;
+		   
+	   }
+    
+	 if(lat1==""||lng1==""||lat1==null||lng1==null)
+		 {
+		 document.getElementById('err-msg5').innerHTML="Enter your Location Correctly!";
+		  return false;
+		 }else if(location=="New Delhi, Delhi, India"||location=="Delhi, India")
+			 {
+			 document.getElementById('err-msg5').innerHTML="Enter your location inside Delhi";
+			  return false;	 
+			 }else if(location=="Faridabad, Haryana, India")
+			 {
+				 document.getElementById('err-msg5').innerHTML="Enter your location inside Faridabad";
+				  return false;	 
+				 }else if(location=="Gurugram, Haryana, India"||location=="Gurgaon, Haryana, India")
+				 {
+					 document.getElementById('err-msg5').innerHTML="Enter your location inside Gurugram";
+					  return false;	 
+					 }else if(location=="Rohini, New Delhi, Delhi, India")
+					 {
+						 document.getElementById('err-msg5').innerHTML="Enter your location inside Rohini";
+						  return false;	 
+						 }else if(location=="Dwarka, New Delhi, Delhi, India")
+						 {
+							 document.getElementById('err-msg5').innerHTML="Enter your location inside Dwarka";
+							  return false;	 
+							 }else if(location=="East Delhi, Delhi, India")
+							 {
+								 document.getElementById('err-msg5').innerHTML="Enter your location inside East Delhi";
+								  return false;	 
+								 }else if(location=="North Delhi, Delhi, India")
+								 {
+									 document.getElementById('err-msg5').innerHTML="Enter your location inside North Delhi";
+									  return false;	 
+									 }
+
     currentStep += 1;
 
 
@@ -1274,7 +1326,18 @@ var msg;
 function step10Next() {
 
    // alert(currentStep);
-     
+ 
+    var lat1 = document.getElementById("latbox1").value;
+    var lng1 = document.getElementById("lngbox1").value;
+    var location1;
+    if (document.getElementById("autocomplete") == undefined) {
+        location1 = document.getElementById("autocomplete1").value;
+    } 
+    else {
+        location1 = document.getElementById("autocomplete").value;
+    }
+   
+    
     if(neww=="Student / Parent - Looking to Hire Teacher for one-to-one class"){
 			
       	//alert("MainIndexFOrm");
@@ -1282,10 +1345,10 @@ function step10Next() {
     	 sessionsinaweek=document.querySelector('input[name="sessionsinaweek"]:checked').value;
       	
 
-        msg = "name=" + name + " phone=" + phone + " course=" + course + " subject=" + subject + "mode"+ modeOnline1 +" optradio=" + optradio +  " start_time="+start_time+ " specific_req=" + specific_req + " gender=" + gender +" classesinaweek="+sessionsinaweek;
+        msg = "name=" + name + " phone=" + phone + " course=" + course + " subject=" + subject + "mode"+ modeOnline1 +" optradio=" + optradio + " lat=" + lat1 + " lng=" + lng1 + " location=" + location1 + " start_time="+start_time+ " specific_req=" + specific_req + " gender=" + gender +" classesinaweek="+sessionsinaweek;
        specific_req = document.getElementById("specific_req").value;
       	
-		// " lat=" + lat1 + " lng=" + lng1 + " location=" + location1 +
+		
 			  
 		   
     }//else IF
@@ -1295,18 +1358,17 @@ function step10Next() {
    
     var sessionsinaweek=document.querySelector('input[name="sessionsinaweek"]:checked').value;
 
-     msg = "name=" + name + " phone=" + phone + " course=" + course + " subject=" + subject + "mode="+ modeOnline1 +" optradio=" + optradio + " start_time="+start_time+  " specific_req=" + specific_req + "gender="+gender+" classesinaweek="+sessionsinaweek;  
+     msg = "name=" + name + " phone=" + phone + " course=" + course + " subject=" + subject + "mode="+ modeOnline1 +" optradio=" + optradio + " lat=" + lat1 + " lng=" + lng1 + " location=" + location1 + " start_time="+start_time+  " specific_req=" + specific_req + "gender="+gender+" classesinaweek="+sessionsinaweek;  
     specific_req = document.getElementById("specific_req").value;
-// " lat=" + lat1 + " lng=" + lng1 + " location=" + location1 + 
+
 
 
     document.getElementById('numberdisplay').innerHTML = phone;
     currentStep += 1;
 
     var xhttp1 = new XMLHttpRequest();
-    xhttp1.open("GET", url + "/ajax.jsp?msg=" + msg + "&name=" + name + "&phone=" + phone + "&course=" + course + "&subject=" + subject + "&mode="+ modeOnline1 + "&optradio=" + optradio  +"&start_time="+start_time+"&specific_req=" + specific_req + "&gender=" + gender+"&sessionsinaweek="+sessionsinaweek, true);
+    xhttp1.open("GET", url + "/ajax.jsp?msg=" + msg + "&name=" + name + "&phone=" + phone + "&course=" + course + "&subject=" + subject + "&mode="+ modeOnline1 + "&optradio=" + optradio + "&lat=" + lat1 + "&lng=" + lng1 + "&location=" + location1 +"&start_time="+start_time+"&specific_req=" + specific_req + "&gender=" + gender+"&sessionsinaweek="+sessionsinaweek, true);
     xhttp1.send();
-    // + "&lat=" + lat1 + "&lng=" + lng1 + "&location=" + location1
     xhttp1.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
 
