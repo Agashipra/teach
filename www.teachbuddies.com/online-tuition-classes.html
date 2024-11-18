@@ -269,7 +269,7 @@ li {
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-      <a class="navbar-brand" href="index.html">    <img src="../storage.googleapis.com/gpswebsite-cdn/OnlineCourseStudentLandingImages/TeachBuddies_LOGO-removebg-preview.png" alt="gharpeshiksha_Logo" class="img-responsive" height="50" width="50" style="    background: #fff;    border-radius: 4px;">
+      <a class="navbar-brand" href="index.html">    <img src="../storage.googleapis.com/gpswebsite-cdn/OnlineCourseStudentLandingImages/TeachBuddies_LOGO-removebg-preview.png" alt="teachbuddies_Logo" class="img-responsive" height="50" width="50" style="    background: #fff;    border-radius: 4px;">
         
  <h3 class="font-w">TeachBuddies</h3> </a>
    
@@ -308,8 +308,8 @@ li {
           <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span><i class="fas fa-chevron-down"></i></span></a>
          <ul class="dropdown-menu">
-      	<!-- <li><a  href="https://blog.gharpeshiksha.com/">Blog</a></li> -->
-      	 <!-- <li> <a href="https://study.gharpeshiksha.com/" >Study Materials</a></li> -->
+      	<!-- <li><a  href="https://blog.teachbuddies.com/">Blog</a></li> -->
+      	 <!-- <li> <a href="https://study.teachbuddies.com/" >Study Materials</a></li> -->
         	<li><a  href="about-us.html">About Us</a></li>
       		<li><a  href="privacy-policy.html">Privacy Policy</a></li>
       		<!-- <li><a  href="refund-cancellation-policy.html">Refund and Cancellation Policy</a></li> -->
@@ -2719,7 +2719,7 @@ function studentSignIn(e){e.preventDefault(),document.getElementById("err").inne
                              
                              <script type="text/javascript">
 				
-                             $(document).ready(function(){$("#passButton").click(function(){if(!document.getElementById("loginusername").value.match(/^[6-9][0-9]{9}$/))return $("#errorMsg").show(),!1;$("#errorMsg").hide(),$("#nextButton,#passwordf,#OTPf,#formButtons,#passButton,#OTPButton,#loginPass,#loginOTP").show(),$("#OTPf,#formButtons,#loginOTP").hide(),$("#nextButtons").slideDown(),$("#passwordf").prop("required",!0),$("#OTPf").prop("required",!1),document.getElementById("loginvia").value="password"}),$("#OTPButton").click(function(){document.getElementById("err").innerHTML='<img id="loading-image" src="images/loading.gif" alt="Loading..." />',$("#OTPButton").hide();var e=document.getElementById("loginusername").value;if(!e.match(/^[6-9][0-9]{9}$/))return $("#errorMsg").show(),$("#loading-image").hide(),$("#OTPButton").show(),!1;$("#errorMsg").hide();var t=window.location.href,n=t.search("www.");t=-1==n?"https://gharpeshiksha.com":"https://www.teachbuddies.com";var o=new XMLHttpRequest;o.open("GET.html",t+"/ajax/validatetutor.jsp?status=student&phone="+e,!0),o.send(),o.onreadystatechange=function(){if(4==this.readyState&&200==this.status){this.responseText;if("true"!=JSON.parse(this.responseText).Status)return $("#OTPButton").show(),document.getElementById("err").innerHTML="Phone Number not registered.Please Sign Up!",!1;$("#loading-image").hide(),$("#nextButton,#passwordf,#OTPf,#formButtons,#passButton,#OTPButton,#loginPass,#loginOTP").show(),$("#passwordf,#formButtons,#loginPass,#errorMsg").hide(),$("#nextButtons").slideDown(),$("#passwordf").prop("required",!1),$("#OTPf").prop("required",!0),document.getElementById("loginvia").value="otp";var n=new XMLHttpRequest;n.open("GET.html",t+"/ajax/sendotp.jsp?phone="+e,!0),n.send(),n.onreadystatechange=function(){if(4==this.readyState&&200==this.status){var e=this.responseText;document.getElementById("otpsessionid").value=e}}}}}),$("#loginPass").click(function(){if(!document.getElementById("loginusername").value.match(/^[6-9][0-9]{9}$/))return $("#login-submit").click(),!1;$("#OTPButton").click()}),$("#loginOTP").click(function(){if(!document.getElementById("loginusername").value.match(/^[6-9][0-9]{9}$/))return $("#login-submit").click(),!1;$("#passButton").click()})});
+                             $(document).ready(function(){$("#passButton").click(function(){if(!document.getElementById("loginusername").value.match(/^[6-9][0-9]{9}$/))return $("#errorMsg").show(),!1;$("#errorMsg").hide(),$("#nextButton,#passwordf,#OTPf,#formButtons,#passButton,#OTPButton,#loginPass,#loginOTP").show(),$("#OTPf,#formButtons,#loginOTP").hide(),$("#nextButtons").slideDown(),$("#passwordf").prop("required",!0),$("#OTPf").prop("required",!1),document.getElementById("loginvia").value="password"}),$("#OTPButton").click(function(){document.getElementById("err").innerHTML='<img id="loading-image" src="images/loading.gif" alt="Loading..." />',$("#OTPButton").hide();var e=document.getElementById("loginusername").value;if(!e.match(/^[6-9][0-9]{9}$/))return $("#errorMsg").show(),$("#loading-image").hide(),$("#OTPButton").show(),!1;$("#errorMsg").hide();var t=window.location.href,n=t.search("www.");t=-1==n?"https://teachbuddies.com":"https://www.teachbuddies.com";var o=new XMLHttpRequest;o.open("GET.html",t+"/ajax/validatetutor.jsp?status=student&phone="+e,!0),o.send(),o.onreadystatechange=function(){if(4==this.readyState&&200==this.status){this.responseText;if("true"!=JSON.parse(this.responseText).Status)return $("#OTPButton").show(),document.getElementById("err").innerHTML="Phone Number not registered.Please Sign Up!",!1;$("#loading-image").hide(),$("#nextButton,#passwordf,#OTPf,#formButtons,#passButton,#OTPButton,#loginPass,#loginOTP").show(),$("#passwordf,#formButtons,#loginPass,#errorMsg").hide(),$("#nextButtons").slideDown(),$("#passwordf").prop("required",!1),$("#OTPf").prop("required",!0),document.getElementById("loginvia").value="otp";var n=new XMLHttpRequest;n.open("GET.html",t+"/ajax/sendotp.jsp?phone="+e,!0),n.send(),n.onreadystatechange=function(){if(4==this.readyState&&200==this.status){var e=this.responseText;document.getElementById("otpsessionid").value=e}}}}}),$("#loginPass").click(function(){if(!document.getElementById("loginusername").value.match(/^[6-9][0-9]{9}$/))return $("#login-submit").click(),!1;$("#OTPButton").click()}),$("#loginOTP").click(function(){if(!document.getElementById("loginusername").value.match(/^[6-9][0-9]{9}$/))return $("#login-submit").click(),!1;$("#passButton").click()})});
 			</script>
     
 	
@@ -2736,7 +2736,7 @@ function studentSignIn(e){e.preventDefault(),document.getElementById("err").inne
                              
           <script type="text/javascript">
 				
-          $(document).ready(function(){$("#passButton_tutor").click(function(){if(!document.getElementById("loginusername_tutor").value.match(/^[6-9][0-9]{9}$/))return $("#errorMsg_tutor").show(),!1;$(".hideMe_tutor_repass").hide(),$("#errorMsg_tutor").hide(),$("#nextButton_tutor,#passwordf_tutor,#OTPf_tutor,#formButtons_tutor,#passButton_tutor,#OTPButton_tutor,#loginPass_tutor,#loginOTP_tutor,#hidePassword,.hideME_tutor_otp,.hideMe_tutorOtp").show(),$("#OTPf_tutor,#formButtons,#loginOTP,#passButton_tutor,#OTPButton_tutor").hide(),$("#nextButtons_tutor").slideDown(),$("#passwordf_tutor").prop("required",!0),$("#OTPf_tutor").prop("required",!1),document.getElementById("loginvia_tutor").value="password"}),$("#OTPButton_tutor").click(function(){document.getElementById("err_tutor").innerHTML='<img id="loading-image" src="images/loading.gif" alt="Loading..." />',$("#OTPButton_tutor").hide();var t=document.getElementById("loginusername_tutor").value;if(!t.match(/^[6-9][0-9]{9}$/))return $("#errorMsg_tutor").show(),$("#loading-image").hide(),$("#OTPButton_tutor").show(),!1;$("#errorMsg_tutor").hide(),$(".hideMe_tutorOtp").hide();var o=window.location.href,e=o.search("www.");o=-1==e?"https://gharpeshiksha.com":"https://www.teachbuddies.com";var r=new XMLHttpRequest;r.open("GET.html",o+"/ajax/validatetutor.jsp?status=tutor&phone="+t,!0),r.send(),r.onreadystatechange=function(){if(4==this.readyState&&200==this.status){this.responseText;if("true"!=JSON.parse(this.responseText).Status)return $("#OTPButton_tutor").show(),document.getElementById("err_tutor").innerHTML="Phone Number not registered.Please Sign Up!",!1;$("#loading-image").hide(),$("#nextButton_tutor,#passwordf_tutor,#OTPf_tutor,#formButtons_tutor,#passButton_tutor,#OTPButton_tutor,#loginPass_tutor,#loginOTP_tutor,.hideMe_tutor_repass").show(),$("#passwordf_tutor,#formButtons_tutor,#loginPass_tutor,#errorMsg_tutor").hide(),$("#nextButtons_tutor").slideDown(),$("#passwordf_tutor").prop("required",!1),$("#OTPf_tutor").prop("required",!0),document.getElementById("loginvia_tutor").value="otp";var e=new XMLHttpRequest;e.open("GET.html",o+"/ajax/sendotp.jsp?phone="+t,!0),e.send(),e.onreadystatechange=function(){if(4==this.readyState&&200==this.status){var t=this.responseText;document.getElementById("otpsessionid_tutor").value=t}}}}}),$("#loginPass_tutor").click(function(){if(!document.getElementById("loginusername_tutor").value.match(/^[6-9][0-9]{9}$/))return $("#login-submit_tutor").click(),!1;$("#OTPButton_tutor").click(),$(".hideMe_tutorOtp").show()}),$("#loginOTP_tutor").click(function(){if(!document.getElementById("loginusername_tutor").value.match(/^[6-9][0-9]{9}$/))return $("#login-submit_tutor").click(),!1;$("#passButton_tutor").click(),$(".hideMe_tutorOtp").hide()})});
+          $(document).ready(function(){$("#passButton_tutor").click(function(){if(!document.getElementById("loginusername_tutor").value.match(/^[6-9][0-9]{9}$/))return $("#errorMsg_tutor").show(),!1;$(".hideMe_tutor_repass").hide(),$("#errorMsg_tutor").hide(),$("#nextButton_tutor,#passwordf_tutor,#OTPf_tutor,#formButtons_tutor,#passButton_tutor,#OTPButton_tutor,#loginPass_tutor,#loginOTP_tutor,#hidePassword,.hideME_tutor_otp,.hideMe_tutorOtp").show(),$("#OTPf_tutor,#formButtons,#loginOTP,#passButton_tutor,#OTPButton_tutor").hide(),$("#nextButtons_tutor").slideDown(),$("#passwordf_tutor").prop("required",!0),$("#OTPf_tutor").prop("required",!1),document.getElementById("loginvia_tutor").value="password"}),$("#OTPButton_tutor").click(function(){document.getElementById("err_tutor").innerHTML='<img id="loading-image" src="images/loading.gif" alt="Loading..." />',$("#OTPButton_tutor").hide();var t=document.getElementById("loginusername_tutor").value;if(!t.match(/^[6-9][0-9]{9}$/))return $("#errorMsg_tutor").show(),$("#loading-image").hide(),$("#OTPButton_tutor").show(),!1;$("#errorMsg_tutor").hide(),$(".hideMe_tutorOtp").hide();var o=window.location.href,e=o.search("www.");o=-1==e?"https://teachbuddies.com":"https://www.teachbuddies.com";var r=new XMLHttpRequest;r.open("GET.html",o+"/ajax/validatetutor.jsp?status=tutor&phone="+t,!0),r.send(),r.onreadystatechange=function(){if(4==this.readyState&&200==this.status){this.responseText;if("true"!=JSON.parse(this.responseText).Status)return $("#OTPButton_tutor").show(),document.getElementById("err_tutor").innerHTML="Phone Number not registered.Please Sign Up!",!1;$("#loading-image").hide(),$("#nextButton_tutor,#passwordf_tutor,#OTPf_tutor,#formButtons_tutor,#passButton_tutor,#OTPButton_tutor,#loginPass_tutor,#loginOTP_tutor,.hideMe_tutor_repass").show(),$("#passwordf_tutor,#formButtons_tutor,#loginPass_tutor,#errorMsg_tutor").hide(),$("#nextButtons_tutor").slideDown(),$("#passwordf_tutor").prop("required",!1),$("#OTPf_tutor").prop("required",!0),document.getElementById("loginvia_tutor").value="otp";var e=new XMLHttpRequest;e.open("GET.html",o+"/ajax/sendotp.jsp?phone="+t,!0),e.send(),e.onreadystatechange=function(){if(4==this.readyState&&200==this.status){var t=this.responseText;document.getElementById("otpsessionid_tutor").value=t}}}}}),$("#loginPass_tutor").click(function(){if(!document.getElementById("loginusername_tutor").value.match(/^[6-9][0-9]{9}$/))return $("#login-submit_tutor").click(),!1;$("#OTPButton_tutor").click(),$(".hideMe_tutorOtp").show()}),$("#loginOTP_tutor").click(function(){if(!document.getElementById("loginusername_tutor").value.match(/^[6-9][0-9]{9}$/))return $("#login-submit_tutor").click(),!1;$("#passButton_tutor").click(),$(".hideMe_tutorOtp").hide()})});
 
 			</script>
 	
@@ -3519,34 +3519,6 @@ text-align:center}
 										<input name="next" type="button" id="step7Next" value="Next" class="next action-button" /> -->
 									</fieldset>
 									<!-- fieldset 7 ================================================================================fieldset 7-->
-									<fieldset id="enqformstep8">
-										<section class="enquiry-section">
-											<h2 class="enquiry-h2"> Enter Your Locality</h2>
-											<div class="form-group">
-												<label for="text"></label>
-												<input type="text" required placeholder="Enter Location" id="autocomplete" class="form-control" onFocus="geolocate()" name="location">
-												<p style="margin-left:10px;">
-													<i>Example: Patel Nagar, New Delhi</i>
-												</p>
-												<br>
-												<div class="text-center">
-													OR
-													<br>
-													<br>
-													<input type="button" value="Pick Current Location" onclick="geolocate1()" class="btn btn-md btn-wid btn-info">
-													<br>
-													<br>
-												</div>
-												<div id="result"></div>
-											</div>
-											<div id="errfn1" style="color:red;font-size:14px"> </div>
-											<input type="hidden" id="latbox1" name="lat">
-											<input type="hidden" id="lngbox1" name="lng">
-										</section>
-										<div id="err-msg5" style="color:red;"></div>
-									<!--	<input type="button" name="previous" id="prevStep1" class="previous1 action-button" value="Previous" />
-										<input name="next" type="button" id="step8Next" value="Next" class="next action-button" /> -->
-									</fieldset>
 									<!-- fieldset 8 ====================================================================================fieldset 8-->
 									<fieldset id="enqformstep9">
 										<div class="container col-xs-12">
@@ -4145,8 +4117,8 @@ display: block !important;
 			 <div class="col-md-12"style="padding-top:30px;padding-bottom:30px" >
 			   <div class="mt-55" align="right"> 
                             <ul class="list-inline" style="text-align:center">
-                               <li class="list-inline-item"><a   target="_blank" href="https://www.facebook.com/gharpeshikshahometutors"><i class="fab facebook footer-social-icon fa-facebook-f"></i></a></li>
-                        <!-- <li class="list-inline-item"><a target="_blank" href="https://twitter.com/gharpeshiksha/"><i class="fab twitter footer-social-icon fa-twitter"></i></a></li> -->
+                               <li class="list-inline-item"><a   target="_blank" href="https://www.facebook.com/teachbuddieshometutors"><i class="fab facebook footer-social-icon fa-facebook-f"></i></a></li>
+                        <!-- <li class="list-inline-item"><a target="_blank" href="https://twitter.com/teachbuddies/"><i class="fab twitter footer-social-icon fa-twitter"></i></a></li> -->
                         <li class="list-inline-item"><a target="_blank"  href="https://teachbuddies.com/"><i class="fab google footer-social-icon fa-google"></i></a></li>
                          <li class="list-inline-item"><a target="_blank"  href="https://www.instagram.com/teach.buddies//"><i class="fab insta footer-social-icon  fa-instagram"></i></a></li>
                         <!-- <li class="list-inline-item"><a target="_blank"  href="https://www.youtube.com/channel/UCIiCZPEBUwEiTlsOZTx6Naw/"><i class="fab youtube footer-social-icon  fa-youtube"></i></a></li> -->
@@ -5605,7 +5577,7 @@ $(".contact-form")
 		const phone = $(this).val();
 	
 		$.ajax({
-			url: "https://api.gharpeshiksha.com/TutorLogin/verified",
+			url: "https://api.teachbuddies.com/TutorLogin/verified",
 		   type: "POST",
 	 	   data: {phone: phone},
 		success: function(data){
@@ -5846,7 +5818,7 @@ $("#login-form_tutor").hide();
    		   {
    			  url="http://localhost:8080/";
    			//  url="https://3-dot-gpschat.appspot.com";
-   		   	 //url="https://gharpeshiksha.com";
+   		   	 //url="https://teachbuddies.com";
    		   	}else{
    		   		//url="http://localhost:8080";
    		 //  	url="https://www.3-dot-gpschat.appspot.com";

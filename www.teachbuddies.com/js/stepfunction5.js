@@ -30,11 +30,11 @@ var currentStep = 0;
    var nakeddomaain=url.search( 'www.' );
    if(nakeddomaain==-1)
    {
-    	url="https://gharpeshiksha.com";
+    	url="https://teachbuddies.com";
 	 // url="https://3-dot-gpschat.appspot.com";	
   //url="http://localhost:8080/";
    }else{
-   	url="https://www.gharpeshiksha.com";
+   	url="https://www.teachbuddies.com";
 	   
    		 //url="http://localhost:8080/";
 		//  url="https://www.3-dot-gpschat.appspot.com";
@@ -221,7 +221,7 @@ $("#enqformstep0").css("opacity", "1");
               //currentStep=0; 
 			   
 			   current_fs.show();
-//$("#enqformstep1,#enqformstep2,#enqformstep3,#enqformstep4,#enqformstep5,#enqformstep5,#enqformstep6,#enqformstep7,#enqformstep8,#enqformstep9,#enqformstep10,#enqformstep11,#enqformstep12").css("opacity", "1");
+//$("#enqformstep1,#enqformstep2,#enqformstep3,#enqformstep4,#enqformstep5,#enqformstep5,#enqformstep6,#enqformstep7,#enqformstep9,#enqformstep10,#enqformstep11,#enqformstep12").css("opacity", "1");
  document.getElementById("enquirystepsform").reset();
  document.getElementById("tutorregister").reset();
 	//	$("#step"+currentStep+"Next").show();
@@ -655,11 +655,11 @@ function step6Next(){
 				//alert(currentStep);
 				
 current_fs = $('#enqformstep6');
-	next_fs = $('#enqformstep8');
+	next_fs = $('#enqformstep9');
 next_fs.show();	
 $("#enqformstep6").css({"opacity": "0", "transform": "scale(1)","position":"relative","display":"none"});
 $("#enqformstep6").hide();
-		$("#enqformstep8").css({"opacity": "1","display":"block"});
+		$("#enqformstep9").css({"opacity": "1","display":"block"});
 		
 	}
 	
@@ -687,56 +687,12 @@ currentStep += 1;
 
 	current_fs = $('#enqformstep'+(currentStep-1));
 	next_fs = $('#enqformstep'+(currentStep-1)).next();
-	  // $('#step7Next').attr('id','step8Next');		   
+	  // $('#step7Next').attr('id','step9Next');		   
 }
 
 
 
 function step8Next(){	
-	 var lat1=document.getElementById("latbox1").value;
-	   var lng1=document.getElementById("lngbox1").value;
-	   var location1;
-	   if(document.getElementById("autocomplete")==undefined)
-		  {
-		   location1=document.getElementById("autocomplete1").value;
-		  }
-	   else
-	   { location1=document.getElementById("autocomplete").value;
-	   }
-	   if(lat1==""||lng1==""||lat1==null||lng1==null)
-		 {
-		 document.getElementById('err-msg5').innerHTML="Enter your Location Correctly!";
-		  return false;
-		 }else if(location=="New Delhi, Delhi, India"||location=="Delhi, India")
-			 {
-			 document.getElementById('err-msg5').innerHTML="Enter your location inside Delhi";
-			  return false;	 
-			 }else if(location=="Faridabad, Haryana, India")
-			 {
-				 document.getElementById('err-msg5').innerHTML="Enter your location inside Faridabad";
-				  return false;	 
-				 }else if(location=="Gurugram, Haryana, India"||location=="Gurgaon, Haryana, India")
-				 {
-					 document.getElementById('err-msg5').innerHTML="Enter your location inside Gurugram";
-					  return false;	 
-					 }else if(location=="Rohini, New Delhi, Delhi, India")
-					 {
-						 document.getElementById('err-msg5').innerHTML="Enter your location inside Rohini";
-						  return false;	 
-						 }else if(location=="Dwarka, New Delhi, Delhi, India")
-						 {
-							 document.getElementById('err-msg5').innerHTML="Enter your location inside Dwarka";
-							  return false;	 
-							 }else if(location=="East Delhi, Delhi, India")
-							 {
-								 document.getElementById('err-msg5').innerHTML="Enter your location inside East Delhi";
-								  return false;	 
-								 }else if(location=="North Delhi, Delhi, India")
-								 {
-									 document.getElementById('err-msg5').innerHTML="Enter your location inside North Delhi";
-									  return false;	 
-									 }
-	
 		currentStep += 1;
 
 
@@ -972,8 +928,8 @@ if((mode=="Home Tuition at Your Home,")  && currentStep==7)
 
 currentStep = 6;
 
-$("#enqformstep8").css({"opacity": "0", "transform": "scale(1)","position":"relative","display":"none"});
-$("#enqformstep8").hide();
+$("#enqformstep9").css({"opacity": "0", "transform": "scale(1)","position":"relative","display":"none"});
+$("#enqformstep9").hide();
 
 		
 

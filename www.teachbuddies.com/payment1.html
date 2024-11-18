@@ -130,70 +130,52 @@
 				      <h1 style="text-align:center;margin-bottom:20px;">Pay Now</h1>
 					  
 					  <!-- <form class="paymentForm" method="post" action="https://www.teachbuddies.com/paytmRedirect.jsp"></form> -->
-					  <form class="paymentForm" method="post" action="./js/paymentDetails.js"> 
-						<div class="form-group">
-							<label for="name" class="cols-sm-2 control-label">Enter Name</label>
-							<div class="cols-sm-10">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-									<input type="text" required class="form-control" name="name" id="name"  placeholder="e.g. John Singh" />
+					  <!-- <form class="paymentForm" method="post" action="./js/paymentDetails.js">  -->
+						<form class="paymentForm" id="paymentForm">
+							<div class="form-group">
+								<label for="name" class="cols-sm-2 control-label">Enter Name</label>
+								<div class="cols-sm-10">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+										<input type="text" required class="form-control" name="name" id="name" placeholder="e.g. John Singh" />
+									</div>
 								</div>
-							</div>
-						</div> 
-
-						<div class="form-group">
-							<label for="email" class="cols-sm-2 control-label">Enter Email</label>
-							<div class="cols-sm-10">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-									<input required type="email" class="form-control" name="EMAIL" id="email"  placeholder="e.g. JohnSingh99@mymail.com " />
-								</div>
-							</div>
-						</div>
-
-						<div class="form-group">
-							<label for="phone" class="cols-sm-2 control-label">Enter Phone Number</label>
-							<div class="cols-sm-10">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
-									<input type="number" class="form-control" required name="MOBILE_NO" id="username"  placeholder="e.g. 87211XXXXX" />
-								</div>
-							</div>
-						</div>
-
-<!-- 						<div class="form-group">
-							<label for="amount" class="cols-sm-2 control-label">I am a</label>
-							<div class="cols-sm-10">
-								<div class="input-group">
-								    <input type="radio"   name="desc" value="Home Tutor">Home Tutor<br>
-                                   <input type="radio"  name="desc" value="Student/Parent">Student/Parent 
-         
-									
-								</div>
-							</div>
-						</div> -->
-
-						<div class="form-group">
-							<label for="confirm" class="cols-sm-2 control-label">Amount to be Paid</label>
-							<div class="cols-sm-10">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-rupee fa-lg" aria-hidden="true"></i></span>
+							</div> 
 			
-						
-								<input type="number" class="form-control" required name="TXN_AMOUNT" placeholder="e.g. 9999"   />
-									
+							<div class="form-group">
+								<label for="email" class="cols-sm-2 control-label">Enter Email</label>
+								<div class="cols-sm-10">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+										<input required type="email" class="form-control" name="EMAIL" id="email" placeholder="e.g. JohnSingh99@mymail.com " />
+									</div>
 								</div>
 							</div>
-						</div>
-						
-						
-<!-- 						  <input type="hidden" name="paytmGateway" value="One"> 
- -->
-						<div class="form-group ">
-							<input  type="submit" id="button" href="./paymentPage.html" class="btn btn-primary btn-lg btn-block login-button" value="Proceed to Pay" >
-						</div>
-						
-					</form>
+			
+							<div class="form-group">
+								<label for="phone" class="cols-sm-2 control-label">Enter Phone Number</label>
+								<div class="cols-sm-10">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
+										<input type="number" style="appearance: none; -webkit-appearance: none; -moz-appearance: textfield;" class="form-control" required name="MOBILE_NO" id="phone" placeholder="e.g. 87211XXXXX" />
+									</div>
+								</div>
+							</div>
+			
+							<div class="form-group">
+								<label for="confirm" class="cols-sm-2 control-label">Amount to be Paid</label>
+								<div class="cols-sm-10">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-rupee fa-lg" aria-hidden="true"></i></span>
+										<input type="number" style="appearance: none; -webkit-appearance: none; -moz-appearance: textfield;" class="form-control" required name="TXN_AMOUNT" placeholder="e.g. 9999" />
+									</div>
+								</div>
+							</div>
+			
+							<div class="form-group">
+								<input type="submit" id="button" class="btn btn-primary btn-lg btn-block login-button" value="Proceed to Pay">
+							</div>
+						</form>
 				</div>
 			</div>
 	<!-- 
@@ -225,7 +207,26 @@
     overflow: hidden !important;
     -webkit-overflow-scrolling: touch;
 }
+/* Hide scrollbar but keep the scrolling functionality */
+html, body {
+	height: 100%;          
+	overflow: hidden;      
+}
+/* This ensures vertical scroll is still possible */
+body {
+	overflow-y: scroll;    
+}
+/* Hide the scrollbar in Webkit browsers (Chrome, Safari, Edge) */
+html::-webkit-scrollbar {
+display: none;
+}
+/* Firefox specific styles */
+html {
+scrollbar-width: none; /* Hide the scrollbar in Firefox */
+}
+
 body, html{
+	
      height: 100%;
  	background-repeat: no-repeat;
  	font-family: 'Oxygen', sans-serif;
@@ -348,6 +349,7 @@ span.input-group-addon i {
 
 </div>
 <!--copy rights end here-->
+	<script src="./js/paymentDetails.js"></script>
 
 </body>
 
