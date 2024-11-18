@@ -1090,7 +1090,7 @@ currentStep += 1;
 
 	current_fs = $('#enqformstep'+(currentStep-1));
 	next_fs = $('#enqformstep'+(currentStep-1)).next();
-	  // $('#step7Next').attr('id','step8Next');		   
+	  // $('#step7Next').attr('id','step9Next');		   
 }
 
 
