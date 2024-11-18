@@ -10,38 +10,30 @@
 	<meta charset="UTF-8">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
 	<link rel="icon" type="image/png" href="../www.teachbuddies.com/newImg/TeachBuddies_LOGO-removebg-preview.png" />
-	<link rel="stylesheet" href="../storage.googleapis.com/gpswebsite-cdn/newCss/bootstrap.min.css">
+	<link rel="stylesheet" href="..//storage.googleapis.com/gpswebsite-cdn/newCss/bootstrap.min.css">
 	<link rel="stylesheet" href="Google Sheet.css">
+	<link rel="stylesheet" href="register-form.js">
 
-
-	<link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-	<link rel="stylesheet" type="text/css" href="../storage.googleapis.com/gpswebsite-cdn/css/leaflet.css">
-	<link rel="stylesheet" type="text/css" href="../storage.googleapis.com/gpswebsite-cdn/css/select2.css">
-	<link rel="stylesheet" href="../use.fontawesome.com/releases/v5.7.0/css/all.css">
-	<link href="https://fonts.googleapis.com/css?family=Muli:400,600,700,800,900&amp;display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css"
-		href="../cdn.jsdelivr.net/gh/kenwheeler/slick%401.8.1/slick/slick-theme.css" />
-	<link rel="stylesheet" type="text/css" href="../cdn.jsdelivr.net/npm/slick-carousel%401.8.1/slick/slick.css" />
-	<link rel="stylesheet" href="../code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="..//storage.googleapis.com/gpswebsite-cdn/css/leaflet.css">
+	<link rel="stylesheet" type="text/css" href="..//storage.googleapis.com/gpswebsite-cdn/css/select2.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+	<link href="https://fonts.googleapis.com/css?family=Muli:400,600,700,800,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
 	 <!-- jQuery Library -->
-	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="../maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-	<script src="../cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-	<script src="../cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
-	<script type="text/javascript" src="../cdn.jsdelivr.net/npm/slick-carousel%401.8.1/slick/slick.min.js"></script>
-
-
-	<script src="../storage.googleapis.com/gpswebsite-cdn/newJs/owl.carousel.min.js"></script>
-
-	<script type="text/javascript" src="../storage.googleapis.com/gpswebsite-cdn/js/leaflet.js"></script>
-
-	<script type="text/javascript" src="../storage.googleapis.com/gpswebsite-cdn/js/select2.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="..//storage.googleapis.com/gpswebsite-cdn/newJs/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="..//storage.googleapis.com/gpswebsite-cdn/js/leaflet.js"></script>
+	<script type="text/javascript" src="..//storage.googleapis.com/gpswebsite-cdn/js/select2.min.js"></script>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-89128249-1"></script>
@@ -103,7 +95,29 @@
 
 	<meta name="google-site-verification" content="CLhtZWuEnhuoUMDPeTD2Wn4yGD2GR-HA114CNezq0hM" />
 	<style>
+		/* Hide scrollbar but keep the scrolling functionality */
+		html, body {
+			height: 100%;          /* Ensure the full height is used */
+			overflow: hidden;      /* Hide the scrollbar */
+		}
+
+		/* This ensures vertical scroll is still possible */
 		body {
+			overflow-y: scroll;    /* Always keep the vertical scrolling */
+		}
+
+		/* Hide the scrollbar in Webkit browsers (Chrome, Safari, Edge) */
+		html::-webkit-scrollbar {
+		display: none;
+		}
+
+		/* Firefox specific styles */
+		html {
+		scrollbar-width: none; /* Hide the scrollbar in Firefox */
+		}
+
+		body {
+			
 			font-family: 'Muli', sans-serif;
 			margin: 0 !important;
 			padding: 0 !important;
@@ -120,13 +134,14 @@
 			box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 		}
 
-
+		
 		@media only screen and (min-width: 768px) {
 			.dropdown:hover .dropdown-menu {
 				display: block;
 			}
 		}
-
+		
+		
 	.nnnn {
 		height: 80px;
 		position: fixed;
@@ -324,8 +339,8 @@
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">More <span><i class="fas fa-chevron-down"></i></span></a>
 					<ul class="dropdown-menu">
-						<!-- <li><a  href="https://blog.gharpeshiksha.com/">Blog</a></li> -->
-						<!-- <li> <a href="https://study.gharpeshiksha.com/" >Study Materials</a></li> -->
+						<!-- <li><a  href="https://blog..com/">Blog</a></li> -->
+						<!-- <li> <a href="https://study..com/" >Study Materials</a></li> -->
 						<li><a href="about-us.html">About Us</a></li>
 						<li><a href="privacy-policy.html">Privacy Policy</a></li>
 						<!-- <li><a  href="refund-cancellation-policy.html">Refund and Cancellation Policy</a></li>
@@ -1757,21 +1772,21 @@
 
 						<div class="col-md-3">&nbsp;</div>
 
-
-						<div class="col-md-6">
+						<!-- Uncomment if want to enable location part on homepage -->
+						<!-- <div class="col-md-6">
 							<img src="newImg/location.webp"
 								style="z-index: 1; width: 25px; padding-top: 13px; position: absolute; left: 25px;"
 								align="left" alt="location image">
-							<!-- <input placeholder="Enter Your Location " class="form-control" type="text" style=" border-radius:40px; padding:0px 50px;height: 57px;border: 1px solid #bc9aff;">-->
-							<!-- 	<select id="location" data-placeholder="Enter your address"
+							 <input id="location" placeholder="Enter Your Location " class="form-control " type="text" style=" border-radius:40px; padding:0px 50px;height: 57px;border: 1px solid #bc9aff;">
+							 	<select id="location" data-placeholder="Enter location"
 								multiple="multiple" class="form-control" type="text"
 								style="border-radius: 40px; padding: 0px 50px; min-height: 51px !important; border: 1px solid #bc9aff;" tabindex="-1" aria-hidden="true"></select>
-						 -->
-							<select id="location" data-placeholder="Enter your address" multiple="multiple"
+
+								<select id="location" data-placeholder="Enter Your Location" multiple="multiple"
 								class="form-control" type="text"
 								style="border-radius: 40px; padding: 0px 50px; min-height: 51px !important; border: 1px solid #bc9aff;"></select>
-
-							<!-- <span
+							
+								<span
 								class="select2 select2-container select2-container--default"
 								dir="ltr" style="width: 360px;"><span class="selection"><span
 									class="select2-selection select2-selection--multiple"
@@ -1784,11 +1799,8 @@
 												style="width: 536.5px;"></li>
 										</ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
 
- -->
 
-						
-
-						</div>
+						</div> -->
 
 						<br>
 
@@ -4534,6 +4546,711 @@
 
 
 
+	<script async>
+
+
+
+
+		//slider		  
+
+		$(document).ready(function () {
+
+			$('.items').slick({
+				dots: true,
+				infinite: true,
+				speed: 800,
+				autoplay: true,
+				autoplaySpeed: 3000,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+
+			});
+		});
+
+
+
+		//===========
+
+		var counted = 0;
+		$(window).scroll(function () {
+
+			var oTop = $('#counter').offset().top - window.innerHeight;
+			if (counted == 0 && $(window).scrollTop() > oTop) {
+				$('.count').each(function () {
+					var $this = $(this),
+						countTo = $this.attr('data-count');
+					$({
+						countNum: $this.text()
+					}).animate({
+						countNum: countTo
+					},
+
+						{
+
+							duration: 2000,
+							easing: 'swing',
+							step: function () {
+								$this.text(Math.floor(this.countNum));
+							},
+							complete: function () {
+								$this.text(this.countNum);
+								//alert('finished');
+							}
+
+						});
+				});
+				counted = 1;
+			}
+
+		});
+
+		//material contact form animation
+		$(".contact-form")
+			.find(".form-control")
+			.each(function () {
+				var targetItem = $(this).parent();
+				if ($(this).val()) {
+					$(targetItem)
+						.find("label")
+						.css({
+							top: "-6px"
+							, fontSize: "14px"
+							, color: "#ff512f"
+						});
+				}
+			});
+		$(".contact-form")
+			.find(".form-control")
+			.focus(function () {
+				$(this)
+					.parent(".input-block")
+					.addClass("focus");
+				$(this)
+					.parent()
+					.find("label")
+					.animate({
+						top: "-6px"
+						, fontSize: "14px"
+						, color: "#ff512f"
+					}
+						, 300
+					);
+			});
+		$(".contact-form")
+			.find(".form-control")
+			.blur(function () {
+				if ($(this).val().length == 0) {
+					$(this)
+						.parent(".input-block")
+						.removeClass("focus");
+					$(this)
+						.parent()
+						.find("label")
+						.animate({
+							top: "15px"
+							, fontSize: "14px"
+						}
+							, 300
+						);
+				}
+			});
+
+
+		/* Main Form Code */
+
+
+
+
+		$("#MainQueryForm").validate({
+			rules: {
+				name: {
+					required: true,
+
+				},
+
+				choosePre: "required",
+				otp: "required",
+				email: "required",
+				state: "required",
+
+			},
+
+			messages: {
+				name: {
+					required: ""
+				},
+
+				choosePre: "",
+				otp: "",
+				email: "",
+				state: "",
+			},
+
+
+
+			submitHandler: function (form) {
+
+				neww = document.getElementById("choosePreId").value;
+				preNAme = document.getElementById("preNAme").value;
+				numOTP = document.getElementById("sendOtpId").value;
+				verifyOTP_Number = document.getElementById("verifyOtpId").value;
+
+				var phone = document.getElementById("sendOtpId").value;
+				// 
+				//	   var otpVar = document.getElementById('sendOtpId').value;
+				var regExp = "[6789][0-9]{9}";
+				var match = phone.match(regExp);
+
+
+				if (verifyOTP_Number == "") {
+					sendOtp();
+					return false;
+				}
+
+				else if (phone === "") {
+
+					return false;
+				}
+
+
+				else if (!match) {
+
+					return false;
+
+				}
+
+
+				else if (successVAr == "Success") {
+					//	alert("inside-VeriFy OTP ELSE IFFFFFF")
+					// verifyOtp();
+
+					//	$("#modalfullNEW").modal('show');
+					//	document.getElementById("query_getname").disabled=true;
+					document.getElementById("phone").disabled = true;
+
+					if (neww == "Student / Parent - Looking to Hire Teacher for one-to-one class") {
+
+
+						$("#modalfullNEW").modal('show');
+						$("#oneTOoneSeleted").show();
+						document.getElementById("modalH3").innerHTML = "Student / Parent - Looking to Hire Teacher for one-to-one class";
+
+
+					}
+
+
+
+
+
+
+					else if (neww == "Student / Parent - Looking for online courses") {
+
+
+
+						$("#modalfullNEW").modal('show');
+
+						document.getElementById("modalH3").innerHTML = "Student / Parent - Looking for online courses";
+					}
+
+
+
+
+
+					else if (neww == "Teacher - Want to Teach for One-to-One Class") {
+
+
+						$("#myModal1").modal('show');
+
+
+
+						document.getElementById("tutor_phone").value = numOTP;
+
+					}
+					return false;
+
+
+				}
+
+			}//Submit Handler
+
+
+
+		});
+
+
+
+
+
+
+
+
+		//=========================================================================
+
+
+		var successVAr;
+		function sendOtp() {
+			$("#CheckImg").hide();
+			$("#verifyOTP_BTN").show();
+			//  alert("Inside Send Otp");	
+
+			var phone = document.getElementById("sendOtpId").value;
+
+			//	   var otpVar = document.getElementById('sendOtpId').value;
+			var regExp = "[6789][0-9]{9}";
+			var match = phone.match(regExp);
+
+			//=document.getElementById("otp").value;
+
+			if (phone === "") {
+
+				document.getElementById("ErrOTP").innerHTML = "Please Enter Number";
+				$("#verifyOTPdiv").hide();
+				$("#ErrOTP").show();
+				return false;
+			}
+
+			else if (phone.length < 10) {
+
+				document.getElementById("ErrOTP").innerHTML = "Please Enter 10 Digits Number";
+				$("#verifyOTPdiv").hide();
+				$("#ErrOTP").show();
+				return false;
+			}
+			else if (!match) {
+
+				document.getElementById('ErrOTP').innerHTML = "Please Enter Correct Phone Number";
+				$("#verifyOTPdiv").hide();
+				$("#ErrOTP").show();
+
+				return false;
+
+			}
+
+
+
+			else {
+
+				//	document.getElementById('otpVerifyBTN').disabled = true;
+
+				$.ajax
+					({
+						type: "POST",
+						action: './js/MainQueryForm.js',
+						data: { "phone": phone },
+						success: function (data) {
+
+							var res = JSON.parse(data);
+
+							// alert(res.Status);
+
+							if (res.Status == "Success") {
+
+
+								sessionId_var = document.getElementById("sessionId").value = res.SessionId;
+								document.getElementById("verifyOtpId").value = "";
+								$("#verifyOTPdiv").show();
+								document.getElementById("verifyERR").innerHTML = "";
+								document.getElementById("showpopup").disabled = true;
+								$("#ErrOTP").hide();
+
+							}
+
+
+						}
+
+					});
+
+
+			}
+
+
+		}
+
+		$("#CheckImg").hide();
+
+
+		function verifyOtp() {
+
+			// alert("Inside Verify Otp");	
+
+			var verificationCode = document.getElementById("verifyOtpId").value;
+			var sessionId = document.getElementById("sessionId").value;
+
+			//  document.getElementById("verifyOtpId").value="";
+
+			if (verificationCode == "") {
+				document.getElementById("verifyERR").innerHTML = "Enter 6 digit OTP";
+
+				return false;
+
+
+			}
+
+			else if (verificationCode.length < 6) {
+
+				document.getElementById("verifyERR").innerHTML = "OTP should be 6 digits";
+			}
+
+			else {
+
+
+				$.ajax({
+					type: "POST",
+					url: "/verifyOtp",
+					data: { "otp": verificationCode, "sessionId": sessionId },
+					success: function (data) {
+
+
+						var status = JSON.parse(data);
+
+						// alert(status.result);
+
+						if (status.result === "Not Matched") {
+							match_Var = "Not Matched";
+							// alert("Otp Not Correct");
+							document.getElementById("verifyERR").innerHTML = "Entered OTP is incorrect.";
+							$("#CheckImg").hide();
+
+
+
+
+						}
+						else {
+							// match_Var="Not Matched";
+							successVAr = "Success";
+							$("#verifyOTP_BTN").hide();
+							// alert("Correct Otp");	 
+							$("#CheckImg").show();
+							document.getElementById("showpopup").disabled = false;
+							document.getElementById("verifyERR").innerHTML = "";
+							flag = true;
+						}
+
+
+					}
+				});
+
+			}
+		}
+
+
+		var StateName = document.getElementById("SelectedStates").value;
+
+
+		var StateName = document.getElementById("SelectedStates").value;
+
+	</script>
+
+
+	<script>
+
+		var latitudeone = "";
+		var longitudeone = "";
+
+		var pincodeOne = 0;
+		var actualAddressOne = "";
+
+
+
+		/*  function fillInAddress1() {
+			 // Get the place details from the autocomplete object.
+			 var place = this.getPlace();
+			 
+			 var actualAddress = place.address_components[0] && place.address_components[0].short_name || '';
+			 
+			 alert(place+" place");
+			 
+			 alert(actualAddress+" Actual Addresss");
+			 
+			 var pincode=0;
+			 
+			 for (var i = 0; i < place.address_components.length; i++) 
+			 {
+				 for (var j = 0; j < place.address_components[i].types.length; j++) 
+				 {
+					 
+				   alert(place.address_components[i].types[j]+" Types");
+					 
+				   if (place.address_components[i].types[j] == "postal_code") 
+				   {
+					   
+					 pincode = place.address_components[i].long_name;
+					 
+					 alert("Inside Postal Code");
+	
+				   }
+				 
+				   
+				 }
+				 
+			  }
+			 
+			 alert(value);
+			 
+			 alert(pincode+" pincode");
+			 
+			 if(value == undefined)
+					{
+					  
+				 value = true;
+				 
+					}
+		    
+			 
+		  if(value == true) 
+	   	
+			{
+		   	
+				 $("#var1").val(value);
+			  $("#var2").val(actualAddress);
+			  $("#var5").val(pincode);
+	
+			  $("#formStudent").submit();
+		    
+			}
+		  
+		  if(value == false)
+				 {
+				 
+				 $("#var3").val(value);
+			  $("#var4").val(actualAddress);
+			  $("#var6").val(pincode);
+	
+			  $("#formTeacher").submit();
+		    
+				 
+				 } 
+	
+	} */
+
+		// Bias the autocomplete object to the user's geographical location,
+		// as supplied by the browser's 'navigator.geolocation' object.
+		/*    function geolocate() {
+			 if (navigator.geolocation) {
+						   
+			   navigator.geolocation.getCurrentPosition(function(position) {
+				 var geolocation = {
+				   lat: position.coords.latitude,
+				   lng: position.coords.longitude
+				 };
+				 var circle = new google.maps.Circle({
+				   center: geolocation,
+				   radius: position.coords.accuracy
+				 });
+				 autocomplete.setBounds(circle.getBounds());
+				 autocomplete1.setBounds(circle.getBounds());
+		
+			   });
+			 }
+		   };
+			*/
+
+		var addressComplete = "";
+
+
+		var autoCompleteOne = {
+			minimumInputLength: 1,
+			ajax: {
+				url: 'https://autocomplete.geocoder.ls.hereapi.com/6.2/suggest.json',
+				delay: 250,
+				dataType: 'json',
+				data: function (params) {
+					return {
+						query: params.term,
+						apikey: 'zM3V80KO_pCSPwfalOB-qwZ-dx-D_Plo4CtlCHf8_8E',
+
+						// vctOA9S5BTXHCd4y0O70044bG5KeIVman2zS53uqTrI
+
+						//   6TeKtXl6AcISyHSrELfRe0NqgtshetCMOIQi-vUWGVY
+						country: 'IND',
+						prox: latitudeone + "," + longitudeone
+						// prox:28.6547564+","+77.1631665 
+					};
+				},
+				processResults: function (data) {
+					return {
+						results: $.map(data.suggestions, function (obj) {
+							return {
+
+
+								id: obj.locationId, text: obj.label.split(', ').reverse().join(', '), value: obj.address.postalCode
+
+
+							};
+						})
+					};
+				}
+			},
+			escapeMarkup: function (markup) { return markup; }
+		};
+
+
+
+		$('#location').select2(autoCompleteOne).on('select2:select', function (e) {
+
+			pincodeOne = 0;
+
+			actualAddressOne = "";
+			addressComplete = "";
+
+			var textOne = e.params.data.text.split(', ');
+
+			actualAddressOne = textOne[0];
+
+			addressComplete = e.params.data.text;
+
+			if (e.params.data.value == undefined) {
+
+
+			}
+
+			else {
+
+				pincodeOne = e.params.data.value;
+
+			}
+
+			console.log(e.params.data.text + " text");
+
+			console.log(pincodeOne + " pincode");
+
+			console.log(actualAddressOne + " actualAddress");
+
+			console.log(addressComplete + " Complete--Address");
+
+			// console.log(value+" Teacher/Student");
+
+			/*   if(value == undefined)
+					{
+					  
+				 value = true;
+				 
+					}
+		    
+			 
+		   if(value == true) 
+	   	
+			{
+		   	
+					$("#var1").val(value);
+			  $("#var2").val(actualAddressOne);
+			  $("#var5").val(pincodeOne);
+	
+			  $("#formStudent").submit();
+		    
+			}
+		  
+		  if(value == false)
+				 {
+				 
+					$("#var3").val(value);
+			  $("#var4").val(actualAddressOne);
+			  $("#var6").val(pincodeOne);
+	
+			  $("#formTeacher").submit();
+		    
+				 
+				 }   */
+
+		});
+
+
+		function TeacherStudentSubmit(e) {
+
+			//	alert(e+" value");	
+
+			if (e === "Student") {
+				//	alert("Inside Student");
+
+				$("#var3").val(e);
+				$("#var4").val(actualAddressOne);
+				$("#var6").val(pincodeOne);
+
+				$("#addressCompleteTeach").val(addressComplete);
+
+				$("#formTeacher").submit();
+
+
+			}
+
+			if (e === "Teacher") {
+
+				//	   alert("Inside Teacher");
+
+				$("#var1").val(e);
+				$("#var2").val(actualAddressOne);
+				$("#var5").val(pincodeOne);
+
+				$("#addressCompleteStdn").val(addressComplete);
+
+				$("#formStudent").submit();
+
+			}
+
+
+
+		}
+
+
+
+
+		function getLocation() {
+
+			if (navigator.geolocation) {
+
+				navigator.geolocation.getCurrentPosition(function (position) {
+					var geolocation =
+					{
+						lat: position.coords.latitude,
+						lng: position.coords.longitude
+					};
+
+
+					latitudeone = position.coords.latitude;
+
+					longitudeone = position.coords.longitude;
+
+					log("lattitude:" + latitudeone + " longitudeone:" + longitudeone);
+					var autoCompleteOne = {
+						minimumInputLength: 1,
+						ajax: {
+							url: 'https://autocomplete.geocoder.ls.hereapi.com/6.2/suggest.json',
+							delay: 250,
+							dataType: 'json',
+							data: function (params) {
+								return {
+									query: params.term,
+									// Enter api key
+									apikey: 'svldj83DIhpDCs9oR4ObU6UnAKFj0Ue2ji0FsZ2LoGM',
+									country: 'IND',
+									prox: latitudeone + "," + longitudeone
+								};
+							},
+							processResults: function (data) {
+								return {
+									results: $.map(data.suggestions, function (obj) {
+										return {
+
+
+											id: obj.locationId, text: obj.label.split(', ').reverse().join(', '), value: obj.address.postalCode
+
+
+										};
+									})
+								};
+							}
+						},
+						escapeMarkup: function (markup) { return markup; }
+					};
+				});
+
+			}
+		};
+
+
+	</script>
+
+
 
 	<style>
 		/*	
@@ -4835,7 +5552,7 @@
 			<ul class="list-inline" style="text-align:center">
 				<li class="list-inline-item"><a target="_blank" href="https://www.facebook.com/teachbuddies"><i
 							class="fab facebook footer-social-icon fa-facebook-f"></i></a></li>
-				<!-- <li class="list-inline-item"><a target="_blank" href="https://twitter.com/gharpeshiksha/"><i
+				<!-- <li class="list-inline-item"><a target="_blank" href="https://twitter.com//"><i
 									class="fab twitter footer-social-icon fa-twitter"></i></a></li> -->
 				<li class="list-inline-item"><a target="_blank" href="https://teachbuddies.com/"><i
 							class="fab google footer-social-icon fa-google"></i></a></li>
@@ -6102,7 +6819,7 @@
 								<h4 style="color:#337ab7; font-weight: bold;text-align:center;margin-bottom:30px">Become
 									Part of our Team</h4>
 								<div class="col-lg-12">
-									<form id="register-form_tutor" role="form" style="display:block" id="form-sec">
+									<form id="register-form_tutor" method="post" action="" role="form" style="display:block" id="form-sec">
 										<input type="hidden" class="tracking_source" name="tracking_source"
 											id="tracking_source">
 										<section class="enquiry-section">
@@ -6450,7 +7167,7 @@
 				const phone = $(this).val();
 
 				$.ajax({
-					url: "https://api.gharpeshiksha.com/TutorLogin/verified",
+					url: "",
 					type: "POST",
 					data: { phone: phone },
 					success: function (data) {
@@ -6683,7 +7400,7 @@
 				if (nakeddomaain == -1) {
 					url = "http://localhost:8080/";
 					//  url="https://3-dot-gpschat.appspot.com";
-					//url="https://gharpeshiksha.com";
+					//url="https://.com";
 				} else {
 					//url="http://localhost:8080";
 					//  	url="https://www.3-dot-gpschat.appspot.com";
@@ -8102,7 +8819,7 @@
 											</div>
 											<div id="err-msg4" style="color: red;"></div>
 											<!--	<input type="button" name="previous" class="previous action-button" value="Previous" />
-										<input name="next" type="button" id="step7Next" value="Next" class="next action-button" /> -->
+										<input name="next" type="button" id="c" value="Next" class="next action-button" /> -->
 										</fieldset>
 
 
@@ -8110,8 +8827,8 @@
 
 										<fieldset id="enqformstep8">
 											<section class="enquiry-section">
-												<h2 class="enquiry-h2">Enter Your Locality</h2>
-												<div class="form-group">
+												<!-- <h2 class="enquiry-h2">Enter Your Locality</h2> -->
+												<!-- <div class="form-group">
 													<label for="text"></label> <input type="text" required=""
 														placeholder="Enter Location" id="location"
 														class="form-control pac-target-input" name="location"
@@ -8126,7 +8843,7 @@
 														<br> <br>
 													</div>
 													<div id="result"></div>
-												</div>
+												</div> -->
 												<div id="errfn1" style="color: red; font-size: 14px"></div>
 												<input type="hidden" id="latbox1" name="lat"> <input type="hidden"
 													id="lngbox1" name="lng">
@@ -8406,26 +9123,41 @@
 
 	<script src="./js/Google Sheet.js"></script>
 
-	<script type="text/javascript">
-	    $(document).ready(function () {
-	      var autocomplete;
-		  var id='location';
-
-	      autocomplete = new google.maps.places.Autocomplete(
-	        document.getElementById(id),
-	        {
-	          types: ['geocode']
-	        }
-	      );
-
-	    });
-	</script>
-
+	<script>
+		let autocomplete;
+  
+		function autocomplete() {
+		  // Initialize the autocomplete object for the location input field
+		  autocomplete = new google.maps.places.Autocomplete(
+			document.getElementById('location'),
+			{
+			  types: ['establishment'], // Restrict results to establishments
+			  fields: ['place_id', 'geometry', 'name'], // Return these fields
+			}
+		  );
+  
+		  // Add an event listener to handle when a place is selected
+		  autocomplete.addListener('place_changed', onPlaceChanged);
+		}
+  
+		function onPlaceChanged() {
+		  var place = autocomplete.getPlace();
+  
+		  if (!place.geometry) {
+			// Update the placeholder text if no place was selected
+			document.getElementById('location').placeholder = 'Enter a Place';
+		  } else {
+			// Display the selected place's name
+			document.getElementById('details').innerHTML = place.name;
+		  }
+		}
+	  </script>
 
 	<script
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAr5ekSPTaPLMWwyvbW0FHpKGI4cwtpatc&amp;libraries=places&amp;callback=initAutocomplete"
 		async defer>
 	</script>
+	<script src="./js/register-form.js"></script>
 
 </body>
 

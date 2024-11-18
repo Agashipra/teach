@@ -12,14 +12,14 @@ var nakeddomaain = url.search('www.');
 if (nakeddomaain == -1) 
 {
 	//url="http://localhost:8080/";
-	url="https://gharpeshiksha.com";
+	url="https://teachbuddies.com";
     //  url="https://3-dot-gpschat.appspot.com";	
 } 
 else 
 {
 	//url="http://localhost:8080/";
 	
-	url="https://www.gharpeshiksha.com";
+	url="https://www.teachbuddies.com";
     // url="https://www.3-dot-gpschat.appspot.com";
 }
 
@@ -270,7 +270,7 @@ function clearForm(event) {
     //currentStep=0; 
 
     current_fs.show();
-    //$("#enqformstep1,#enqformstep2,#enqformstep3,#enqformstep4,#enqformstep5,#enqformstep5,#enqformstep6,#enqformstep7,#enqformstep8,#enqformstep9,#enqformstep10,#enqformstep11,#enqformstep12").css("opacity", "1");
+    //$("#enqformstep1,#enqformstep2,#enqformstep3,#enqformstep4,#enqformstep5,#enqformstep5,#enqformstep6,#enqformstep7,#enqformstep9,#enqformstep10,#enqformstep11,#enqformstep12").css("opacity", "1");
    // document.getElementById("enquirystepsform").reset();
     //document.getElementById("tutorregister").reset();
     //	$("#step"+currentStep+"Next").show();
@@ -802,14 +802,14 @@ else if(!emailMatch)
         
    	 $.ajax({
    		 type:"POST",
-   		 url:"https://api.gharpeshiksha.com/OnlineCourseStudentLogin/studentSignUpLanding",
+   		 url:"https://api.teachbuddies.com/OnlineCourseStudentLogin/studentSignUpLanding",
    		 
    		 data:{"name":name,"course":course,"phone":phone,},
    		 success:function(data){
    			 // alert(data.Message);
    			 /*if(data.Message==="Account already exists"){
 				 
-				window.location="https://learn.gharpeshiksha.com/url/"+document.getElementById("phone").value+"/"+document.getElementById("phone").value;
+				window.location="https://learn.teachbuddies.com/url/"+document.getElementById("phone").value+"/"+document.getElementById("phone").value;
 					
 				return false;
 			 }
@@ -820,7 +820,7 @@ else if(!emailMatch)
    				 
    				 				  
    			  document.getElementById("err-msg1").innerHTML=data.Message;
-   			  document.getElementById("showLogin").innerHTML='<a href="https://learn.gharpeshiksha.com/login" target=\"_blank\" style=\"background: #236cb5;padding: 5px 20px; color: #fff;\">Sign IN Here!</a>';
+   			  document.getElementById("showLogin").innerHTML='<a href="https://learn.teachbuddies.com/login" target=\"_blank\" style=\"background: #236cb5;padding: 5px 20px; color: #fff;\">Sign IN Here!</a>';
    			 document.getElementById('step1Next').style.display = 'none';
    			  return false;
    			  
@@ -912,13 +912,13 @@ function step4Next() {
 
       	$.ajax({
 			 type:"POST",
-			 url:"https://api.gharpeshiksha.com/OnlineCourseStudentLogin/studentInfoLanding",
+			 url:"https://api.teachbuddies.com/OnlineCourseStudentLogin/studentInfoLanding",
 			 //data:$("#formnew2").serialize(),
 			 data:{"board":boardM,"city":cityM,"school":schoolM,"phone":numOTP,"state":StateName},
 			 
 			 success:function(data){
 				 
-				 window.location="https://learn.gharpeshiksha.com/url/"+document.getElementById("sendOtpId").value+"/"+document.getElementById("sendOtpId").value;
+				 window.location="https://learn.teachbuddies.com/url/"+document.getElementById("sendOtpId").value+"/"+document.getElementById("sendOtpId").value;
 
 			      	
 		
@@ -943,7 +943,7 @@ function step4Next() {
   var StateNameFrom= document.getElementById("SelectedStatesForm").value;
 		 $.ajax({
 			 type:"POST",
-			 url:"https://api.gharpeshiksha.com/OnlineCourseStudentLogin/studentInfoLanding",
+			 url:"https://api.teachbuddies.com/OnlineCourseStudentLogin/studentInfoLanding",
 			 //data:$("#formnew2").serialize(),
 			 data:{"board":board1,"city":city1,"school":school1,"phone":numm,"state":StateNameFrom},
 			 
@@ -1050,12 +1050,12 @@ function step6Next(){
 				//alert(currentStep);
 				
               current_fs = $('#enqformstep6');
-	          next_fs = $('#enqformstep8');
+	          next_fs = $('#enqformstep9');
               next_fs.show();	
               $("#enqformstep6").css({"opacity": "0", "transform": "scale(1)","position":"relative","display":"none"});
               $("#enqformstep6").hide();
               
-		      $("#enqformstep8").css({"opacity": "1","display":"block"});
+		      $("#enqformstep9").css({"opacity": "1","display":"block"});
 		
 	}
 	
@@ -1090,7 +1090,7 @@ currentStep += 1;
 
 	current_fs = $('#enqformstep'+(currentStep-1));
 	next_fs = $('#enqformstep'+(currentStep-1)).next();
-	  // $('#step7Next').attr('id','step8Next');		   
+	  // $('#step7Next').attr('id','step9Next');		   
 }
 
 
@@ -1098,65 +1098,11 @@ currentStep += 1;
 
 
 function step8Next() {
-    //alert(currentStep);
-
-    var lat1 = document.getElementById("latbox1").value;
-    var lng1 = document.getElementById("lngbox1").value;
-    var location1;
-    
-    if(document.getElementById("autocomplete")==undefined)
-	   {
-		   
-    	location1=document.getElementById("autocomplete1").value;
-    	
-	   }
-	   else
-	   { 
-		   
-		   location1=document.getElementById("autocomplete").value;
-		   
-	   }
-    
-	 if(lat1==""||lng1==""||lat1==null||lng1==null)
-		 {
-		 document.getElementById('err-msg5').innerHTML="Enter your Location Correctly!";
-		  return false;
-		 }else if(location=="New Delhi, Delhi, India"||location=="Delhi, India")
-			 {
-			 document.getElementById('err-msg5').innerHTML="Enter your location inside Delhi";
-			  return false;	 
-			 }else if(location=="Faridabad, Haryana, India")
-			 {
-				 document.getElementById('err-msg5').innerHTML="Enter your location inside Faridabad";
-				  return false;	 
-				 }else if(location=="Gurugram, Haryana, India"||location=="Gurgaon, Haryana, India")
-				 {
-					 document.getElementById('err-msg5').innerHTML="Enter your location inside Gurugram";
-					  return false;	 
-					 }else if(location=="Rohini, New Delhi, Delhi, India")
-					 {
-						 document.getElementById('err-msg5').innerHTML="Enter your location inside Rohini";
-						  return false;	 
-						 }else if(location=="Dwarka, New Delhi, Delhi, India")
-						 {
-							 document.getElementById('err-msg5').innerHTML="Enter your location inside Dwarka";
-							  return false;	 
-							 }else if(location=="East Delhi, Delhi, India")
-							 {
-								 document.getElementById('err-msg5').innerHTML="Enter your location inside East Delhi";
-								  return false;	 
-								 }else if(location=="North Delhi, Delhi, India")
-								 {
-									 document.getElementById('err-msg5').innerHTML="Enter your location inside North Delhi";
-									  return false;	 
-									 }
-
     currentStep += 1;
-
 
     current_fs = $('#enqformstep' + (currentStep - 1));
     next_fs = $('#enqformstep' + (currentStep - 1)).next();
-    //  $('#step8Next').attr('id','step9Next');		   
+    //  $('#step9Next').attr('id','step10Next');		   
 
 
 
@@ -1213,31 +1159,12 @@ function SendIndexPage()
 {
 
     specific_req = document.getElementById("specific_req").value;
-    
-	var lat1 = document.getElementById("latbox1").value;
-	
-    var lng1 = document.getElementById("lngbox1").value;
-    
-    var location1;
-    
-    if (document.getElementById("autocomplete") == undefined) 
-    {
-        
-    	location1 = document.getElementById("autocomplete1").value;
-    	
-    } 
-    else 
-    {
-        
-    	location1 = document.getElementById("autocomplete").value;
-    	
-    }
-  	
+
   	//STep 8 Code
     
 
     var xhttp1 = new XMLHttpRequest();
-    xhttp1.open("GET",url +"/ajax.jsp?msg=" + msg + "&name=" + name + "&phone=" + phone + "&course=" + course + "&subject=" + subject +"&mode="+ modeOnline1 + "&optradio=" + optradio + "&lat=" + lat1 + "&lng=" + lng1 + "&location="+ location1 +"&start_time="+start_time+"&specific_req=" +specific_req + "&gender="+gender+"&sessionsinaweek="+sessionsinaweek, true);
+    xhttp1.open("GET",url +"/ajax.jsp?msg=" + msg + "&name=" + name + "&phone=" + phone + "&course=" + course + "&subject=" + subject +"&mode="+ modeOnline1 + "&optradio=" + optradio +"&start_time="+start_time+"&specific_req=" +specific_req + "&gender="+gender+"&sessionsinaweek="+sessionsinaweek, true);
     xhttp1.send();
     xhttp1.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -1253,7 +1180,7 @@ function SendIndexPage()
 	 var xhttp = new XMLHttpRequest();
 	   xhttp.open("POST", "/enquiry", true);
 	   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	   xhttp.send("otp="+verifyOTP_Number+"&otpid="+sessionId_var+"&name="+name+"&phone="+phone+"&location="+location1+"&subject="+subject+"&mode="+modeOnline1+"&Select1="+course+"&gender="+gender+"&source="+"Google"+"&lat="+lat1+"&lng="+lng1+"&optradio="+optradio+"&start_time="+start_time+"&specific_req="+specific_req+"&tracking_source="+source+"&sessionsinaweek="+sessionsinaweek+"&email="+email);
+	   xhttp.send("otp="+verifyOTP_Number+"&otpid="+sessionId_var+"&name="+name+"&phone="+phone+"&location="+location1+"&subject="+subject+"&mode="+modeOnline1+"&Select1="+course+"&gender="+gender+"&source="+"Google"+"&optradio="+optradio+"&start_time="+start_time+"&specific_req="+specific_req+"&tracking_source="+source+"&sessionsinaweek="+sessionsinaweek+"&email="+email);
 	   xhttp.onreadystatechange = function() {
 		    if (this.readyState == 4 && this.status == 200) {
 	  		    
@@ -1326,16 +1253,6 @@ var msg;
 function step10Next() {
 
    // alert(currentStep);
- 
-    var lat1 = document.getElementById("latbox1").value;
-    var lng1 = document.getElementById("lngbox1").value;
-    var location1;
-    if (document.getElementById("autocomplete") == undefined) {
-        location1 = document.getElementById("autocomplete1").value;
-    } 
-    else {
-        location1 = document.getElementById("autocomplete").value;
-    }
    
     
     if(neww=="Student / Parent - Looking to Hire Teacher for one-to-one class"){
@@ -1345,7 +1262,7 @@ function step10Next() {
     	 sessionsinaweek=document.querySelector('input[name="sessionsinaweek"]:checked').value;
       	
 
-        msg = "name=" + name + " phone=" + phone + " course=" + course + " subject=" + subject + "mode"+ modeOnline1 +" optradio=" + optradio + " lat=" + lat1 + " lng=" + lng1 + " location=" + location1 + " start_time="+start_time+ " specific_req=" + specific_req + " gender=" + gender +" classesinaweek="+sessionsinaweek;
+        msg = "name=" + name + " phone=" + phone + " course=" + course + " subject=" + subject + "mode"+ modeOnline1 +" optradio=" + optradio + " start_time="+start_time+ " specific_req=" + specific_req + " gender=" + gender +" classesinaweek="+sessionsinaweek;
        specific_req = document.getElementById("specific_req").value;
       	
 		
@@ -1358,7 +1275,7 @@ function step10Next() {
    
     var sessionsinaweek=document.querySelector('input[name="sessionsinaweek"]:checked').value;
 
-     msg = "name=" + name + " phone=" + phone + " course=" + course + " subject=" + subject + "mode="+ modeOnline1 +" optradio=" + optradio + " lat=" + lat1 + " lng=" + lng1 + " location=" + location1 + " start_time="+start_time+  " specific_req=" + specific_req + "gender="+gender+" classesinaweek="+sessionsinaweek;  
+     msg = "name=" + name + " phone=" + phone + " course=" + course + " subject=" + subject + "mode="+ modeOnline1 +" optradio=" + optradio + " start_time="+start_time+  " specific_req=" + specific_req + "gender="+gender+" classesinaweek="+sessionsinaweek;  
     specific_req = document.getElementById("specific_req").value;
 
 
@@ -1367,7 +1284,7 @@ function step10Next() {
     currentStep += 1;
 
     var xhttp1 = new XMLHttpRequest();
-    xhttp1.open("GET", url + "/ajax.jsp?msg=" + msg + "&name=" + name + "&phone=" + phone + "&course=" + course + "&subject=" + subject + "&mode="+ modeOnline1 + "&optradio=" + optradio + "&lat=" + lat1 + "&lng=" + lng1 + "&location=" + location1 +"&start_time="+start_time+"&specific_req=" + specific_req + "&gender=" + gender+"&sessionsinaweek="+sessionsinaweek, true);
+    xhttp1.open("GET", url + "/ajax.jsp?msg=" + msg + "&name=" + name + "&phone=" + phone + "&course=" + course + "&subject=" + subject + "&mode="+ modeOnline1 + "&optradio=" + optradio +"&start_time="+start_time+"&specific_req=" + specific_req + "&gender=" + gender+"&sessionsinaweek="+sessionsinaweek, true);
     xhttp1.send();
     xhttp1.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -1466,16 +1383,16 @@ function step11Next(){
 
 		
 		
-		var lat1=document.getElementById("latbox1").value;
-	    	   var lng1=document.getElementById("lngbox1").value;
-	    	   var location1;
-	    	   if(document.getElementById("autocomplete")==undefined)
-	    		  {
-	    		   location1=document.getElementById("autocomplete1").value;
-	    		  }
-	    	   else
-	    	   { location1=document.getElementById("autocomplete").value;
-	    	   }
+		// var lat1=document.getElementById("latbox1").value;
+	    // 	   var lng1=document.getElementById("lngbox1").value;
+	    // 	   var location1;
+	    // 	   if(document.getElementById("autocomplete")==undefined)
+	    // 		  {
+	    // 		   location1=document.getElementById("autocomplete1").value;
+	    // 		  }
+	    // 	   else
+	    // 	   { location1=document.getElementById("autocomplete").value;
+	    // 	   }
 	    	   var otp=document.getElementById("otpp").value;
 	    	   var otpid=document.getElementById("otpid").value;
 	    	
@@ -1487,13 +1404,13 @@ function step11Next(){
 	  		 document.getElementById('err-msg10').innerHTML="Please Enter OTP";
 	  		  return false;		   
 	  		 }
-	  		 document.getElementById("err-msg10").innerHTML="<img id=\"loading-image\" src=\"https://www.gharpeshiksha.com/images/loading.gif\" alt=\"Loading...\" />";
-	  		document.getElementById("stepFinal").style.display="none";
+	  		 document.getElementById("err-msg10").innerHTML="<img id=\"loading-image\" src=\"https://www.teachbuddies.com/images/loading.gif\" alt=\"Loading...\" />";
+	  		documentst .getElementById("stepFinal").style.display="none";
 	  		
 	  		 var xhttp = new XMLHttpRequest();
 	  		   xhttp.open("POST", "/enquiry", true);
 	  		   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	  		   xhttp.send("otp="+otp+"&otpid="+otpid+"&name="+name+"&phone="+phone+"&location="+location1+"&subject="+subject+"&mode="+modeOnline1+"&Select1="+course+"&gender="+gender+"&source="+"Google"+"&lat="+lat1+"&lng="+lng1+"&optradio="+optradio+"&start_time="+start_time+"&specific_req="+specific_req+"&tracking_source="+source+"&sessionsinaweek="+sessionsinaweek);
+	  		   xhttp.send("otp="+otp+"&otpid="+otpid+"&name="+name+"&phone="+phone+"&subject="+subject+"&mode="+modeOnline1+"&Select1="+course+"&gender="+gender+"&source="+"Google"+"&optradio="+optradio+"&start_time="+start_time+"&specific_req="+specific_req+"&tracking_source="+source+"&sessionsinaweek="+sessionsinaweek);
 	  		   xhttp.onreadystatechange = function() {
 	  		     if (this.readyState == 4 && this.status == 200) {
 	  		    
@@ -1568,7 +1485,7 @@ function step11Next(){
 		 $.ajax({
 			 
 			 type:"POST",
-			 url:"https://api.gharpeshiksha.com/OnlineCourseStudentLogin/verifyotp",
+			 url:"https://api.teachbuddies.com/OnlineCourseStudentLogin/verifyotp",
 			data:{"otp":optDial,"sessionId":sess,"otp_phone":otp_P},
 			 //data:$("#enquirystepsform").serialize(),
 			 success:function(data){
@@ -1585,7 +1502,7 @@ function step11Next(){
 				 else
 				 {
 				 
-				 window.location="https://learn.gharpeshiksha.com/url/"+document.getElementById("otp_phone").value+"/"+document.getElementById("otp_phone").value;
+				 window.location="https://learn.teachbuddies.com/url/"+document.getElementById("otp_phone").value+"/"+document.getElementById("otp_phone").value;
 		
 				 }
 		
@@ -1635,8 +1552,8 @@ function Previousbutton() { //  console.log("BEFORE FUNCTON CALL PREVIOUS :" + p
 
         currentStep = 6;
 
-        $("#enqformstep8").css({ "opacity": "0","transform": "scale(1)", "position": "relative","display": "none" });
-        $("#enqformstep8").hide();
+        $("#enqformstep9").css({ "opacity": "0","transform": "scale(1)", "position": "relative","display": "none" });
+        $("#enqformstep9").hide();
 
     }*/
 
