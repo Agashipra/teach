@@ -10,18 +10,24 @@
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
     <link rel="icon" type="image/png" href="../www.teachbuddies.com/newImg/TeachBuddies_LOGO-removebg-preview.png" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <style>
-        
-        body {
-            
-            font-family: Arial, sans-serif;
-            margin: 0;
+        *{
             padding: 0;
+            margin: 0;
+            font-family: outfit;
+        }
+        
+        body { 
+            font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            
+            /* height: 100vh; */
             background-color: #538392;
         }
         .home {
@@ -51,7 +57,8 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             max-width: 600px;
             width: 100%;
-            padding: 20px;
+            margin: 2vh 0;
+            padding: 4vh 0; 
             text-align: center;
         }
         h1 {
@@ -61,14 +68,26 @@
             color: #3572EF;
         }
         .qr-section {
-            margin-top: 250px;
             margin-bottom:50px;
-            border-bottom: 2px solid black;
+            border-bottom: 2px solid tomato;
         }
         .qr-section img {
             max-width: 400px;
         }
-        .contact-section {
+        .details-button{
+            text-decoration: none;
+            color: #272727;
+            background-color: transparent;
+            border: 2px solid #272727;
+            border-radius: 50px;
+            padding: 10px;
+        }
+        .details-button:hover{
+            border: 2px solid skyblue;
+            background-color: lightblue;
+        }
+        
+        /* .contact-section {
             margin-top: 4rem;
         }
         .contact-section input,
@@ -89,7 +108,7 @@
         }
         .contact-section button:hover {
             background-color: #218838;
-        }
+        } */
     </style>
 </head>
 <body>
@@ -111,7 +130,7 @@
             <img src="./images/gpayQR.jpeg" alt="QR Code">
             <p>Use your mobile banking app or UPI to scan the QR code and make the payment.</p>
         </div>
-
+        
         <div class="contact-section">
             <h2>Pay via Other Methods</h2>
             <p style="color: #134B70; font-family: 'Poppins', sans-serif;">Phone Number: +91 98285 45550 <br>
@@ -125,6 +144,10 @@
                 <textarea name="message" rows="4" placeholder="How would you like to pay?" required></textarea>
                 <button type="submit">Submit</button>
             </form> -->
+        </div>
+        <div style="margin-top: 3vh;">
+            <p style="margin-bottom : 15px;">Kindly share the paymnet details once payment is done.</p>
+            <a class="details-button" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfeRvdQyACn1lZ0BypyMMb0cLVD8lF8GEpZVHZ4ixe1Vcap3Q/viewform"> Share Payment Details </a>
         </div>
     </div>
 </body>
